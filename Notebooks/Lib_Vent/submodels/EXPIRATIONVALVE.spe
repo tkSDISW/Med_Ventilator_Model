@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE SPE>
+<SPE DOC_VERSION="2" AME_VERSION="2404" MAJ="20241" UPDATE="0" HOTFIX="0">
+
+ <SUBMODEL>
+  <CODE_GEN_VERSION>1.0</CODE_GEN_VERSION>
+  <SUB_TYPE>1</SUB_TYPE>
+  <DEFAULT_ICON>Expiration</DEFAULT_ICON>
+  <AUTONOMOUS_COMPILATION>False</AUTONOMOUS_COMPILATION>
+  <AUTONOMOUS_RUNTIME>False</AUTONOMOUS_RUNTIME>
+  <SUB_UNIT>0</SUB_UNIT>
+  <OUTPUT_TYPE>0</OUTPUT_TYPE>
+  <EVARS_LIST>
+   <PORT>
+    <PORT_TAG>undefined</PORT_TAG>
+    <USE_REQUIRED>0</USE_REQUIRED>
+    <EVAR>
+     <SUB_ID>1</SUB_ID>
+     <TITLE>input signal</TITLE>
+     <VARNAME>res</VARNAME>
+     <VISIBILITY>True</VISIBILITY>
+     <TYPE>0</TYPE>
+     <DIMENSION>1</DIMENSION>
+     <IO>1</IO>
+     <UNITS>null</UNITS>
+    </EVAR>
+   </PORT>
+   <PORT>
+    <PORT_TAG>undefined</PORT_TAG>
+    <USE_REQUIRED>0</USE_REQUIRED>
+    <EVAR>
+     <SUB_ID>2</SUB_ID>
+     <TITLE>enthalpy flow rate at port 2</TITLE>
+     <VARNAME>dh2</VARNAME>
+     <VISIBILITY>True</VISIBILITY>
+     <TYPE>0</TYPE>
+     <DIMENSION>1</DIMENSION>
+     <IO>2</IO>
+     <UNITS>J/s</UNITS>
+    </EVAR>
+    <EVAR>
+     <SUB_ID>3</SUB_ID>
+     <TITLE>mass flow rate at port 2</TITLE>
+     <VARNAME>dm2</VARNAME>
+     <VISIBILITY>True</VISIBILITY>
+     <TYPE>0</TYPE>
+     <DIMENSION>1</DIMENSION>
+     <IO>2</IO>
+     <UNITS>g/s</UNITS>
+    </EVAR>
+    <EVAR>
+     <SUB_ID>4</SUB_ID>
+     <TITLE>outgoing flow rate com index at port 3</TITLE>
+     <VARNAME>rnum2</VARNAME>
+     <VISIBILITY>True</VISIBILITY>
+     <TYPE>4</TYPE>
+     <PRIMARY_PORT>2</PRIMARY_PORT>
+     <PRIMARY_VAR>2</PRIMARY_VAR>
+     <DUP_TYPE>0</DUP_TYPE>
+    </EVAR>
+    <EVAR>
+     <SUB_ID>5</SUB_ID>
+     <TITLE>temperature at port 2</TITLE>
+     <VARNAME>temp2</VARNAME>
+     <VISIBILITY>True</VISIBILITY>
+     <TYPE>0</TYPE>
+     <DIMENSION>1</DIMENSION>
+     <IO>1</IO>
+     <UNITS>K</UNITS>
+    </EVAR>
+    <EVAR>
+     <SUB_ID>6</SUB_ID>
+     <TITLE>pressure at port 2</TITLE>
+     <VARNAME>press2</VARNAME>
+     <VISIBILITY>True</VISIBILITY>
+     <TYPE>0</TYPE>
+     <DIMENSION>1</DIMENSION>
+     <IO>1</IO>
+     <UNITS>Pa</UNITS>
+    </EVAR>
+    <EVAR>
+     <SUB_ID>7</SUB_ID>
+     <TITLE>com index at port 2</TITLE>
+     <VARNAME>cnum2</VARNAME>
+     <VISIBILITY>True</VISIBILITY>
+     <TYPE>0</TYPE>
+     <DIMENSION>1</DIMENSION>
+     <IO>1</IO>
+     <UNPLOTTABLE>1</UNPLOTTABLE>
+     <UNITS>thpnull</UNITS>
+    </EVAR>
+   </PORT>
+  </EVARS_LIST>
+  <CIR_PORTS_OVER_FRAMEWORK>1</CIR_PORTS_OVER_FRAMEWORK>
+ </SUBMODEL>
+</SPE>

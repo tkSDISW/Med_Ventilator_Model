@@ -1,0 +1,8 @@
+capellambse
+# Jinja
+vsdx
+python-pptx
+openpyxl
+XlsxWriter
+polarion
+ipywidgets

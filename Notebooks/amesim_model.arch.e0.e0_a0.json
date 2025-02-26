@@ -1,0 +1,2 @@
+8ef7b8910900052b2b3301ce135b23f8cc6ef447aa44a2897c3c2515a8f655a5
+{"py/object": "scs_generate.connectionSolver.architectureContainer.ArchitectureContainer", "__ensemble": "amesim_model.arch.ensb.e0.json", "__solution": {"py/object": "array.array", "typecode": "h", "values": [17, 40, 67, 73, 107, 125, 131, 133, 158, 154, 210, 227, 254, 252, 247, 260, 273, 289]}, "__architectureName": 0, "__architecture": null, "__configurations": null, "__variantsVariables": null}

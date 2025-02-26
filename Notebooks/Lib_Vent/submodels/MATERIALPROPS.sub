@@ -1,0 +1,4022 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE SUB>
+<SUB DOC_VERSION="2" AME_VERSION="2404" MAJ="20241" UPDATE="0" HOTFIX="0">
+
+ <SUPERCOMPONENT>
+  <SC_SUB_NAME>MATERIALPROPS</SC_SUB_NAME>
+  <CATNAME>Ventilator</CATNAME>
+  <SC_PORTS_MAP_LIST>
+  </SC_PORTS_MAP_LIST>
+  <CIRCUIT>
+   <AME_APPLICATION>AMESim</AME_APPLICATION>
+   <COMPS_LIST>
+    <COMP>
+     <COMP_TYPE>0</COMP_TYPE>
+     <ALIAS>gm_def</ALIAS>
+     <COMP_NAME>gm_def</COMP_NAME>
+     <COMP_DISPLAYNAME>gm_def</COMP_DISPLAYNAME>
+     <COMP_ICON_DESCRIPTION>gas mixture definition</COMP_ICON_DESCRIPTION>
+     <COMP_LIBRARY_ID>gasmixture.gm_def</COMP_LIBRARY_ID>
+     <COMP_POS>178 74</COMP_POS>
+     <COMP_DEPTH>201</COMP_DEPTH>
+     <CIR_COMP_ICON>
+      <CIR_ICON_IDENTITY>1</CIR_ICON_IDENTITY>
+      <ICON_MAP>
+       <ICON_MAP_FORMAT>svgz/base64</ICON_MAP_FORMAT>
+       <ICON_MAP_DATA>
+        H4sIAAAAAAACCr2VQW+bMBiG7/0VlntgO8RgkwSIINV2mDRpk3ropN4mRgyxajCyPUj26/dBgMOURkVTsRD+bF6/j/3ZMvHDqZSo4doIVSUOJZ6DeJWpg6iKxPnx9GUVOg/7u9g0BQJlZRJ8tLbeuW7btqT1idKFyzzPc0GBL5LdSYrq5ZqQRlHk9l/xxMSUMIx+pYY/apULyRNsRXXGSBwS/E00XEr1k4J1gr36hNF5qFtxsMcE+1HXOHJRHO3YagRvP6tuAPKQH8GDkQJeLlWbYJNpJWU/152p0wyAteaG64ZjWGnRgwutfteA3d8hhOJM6ExyBLOTCb7P+4KRsVq9wOh7ry9jx2qYGZs6SmG5lgIqWC3oMpgajcgGovMYaQhCCNz/IHqd0S1mODI3I/JdeWw78qJFeD6bchosAgwmXrhMQsMLji0Bo9PqLnl9fyAdgctkk07H5XJQrwD7pI97zAjtRR6Jrsh8j2wHIe2iV4WMjkK2uSmEQ/U2x4CsB8P1bbLfraDf0U7wj9Dyk0VWp5XJlS4TXKZWi9MHirpblCIK6USMfcQoV5Vd5WkpJDg5n7RIpTP0GvEH9iOES3j/PXY7x7d5B4Ru13SO/dc59hHxw20wx/55hj1kPWBslv3TaB+7RfeCn+f+LzRT3oCLBwAA
+       </ICON_MAP_DATA>
+      </ICON_MAP>
+      <CIR_PORT_GRAPHICS>
+       IDxQT1JUUy8+Cg==
+      </CIR_PORT_GRAPHICS>
+      <CIR_PORT_HIDDEN>0</CIR_PORT_HIDDEN>
+     </CIR_COMP_ICON>
+     <COMP_SCALE_X>1.000000</COMP_SCALE_X>
+     <COMP_SCALE_Y>1.000000</COMP_SCALE_Y>
+     <COMP_GEOMETRY>1</COMP_GEOMETRY>
+     <LABEL_POS>0 0 0 0</LABEL_POS>
+     <LABEL_VISIBLE>0</LABEL_VISIBLE>
+     <CIRCUIT_SCOPE_ID>1</CIRCUIT_SCOPE_ID>
+     <SUBMODEL>
+      <CODE_GEN_VERSION>1.0</CODE_GEN_VERSION>
+      <SUB_TYPE>0</SUB_TYPE>
+      <SUB_NAME>GMGD0</SUB_NAME>
+      <SUB_DIR>$AME/libgm/submodels</SUB_DIR>
+      <SUB_ID_MAX>28</SUB_ID_MAX>
+      <AUTONOMOUS_COMPILATION>False</AUTONOMOUS_COMPILATION>
+      <AUTONOMOUS_RUNTIME>False</AUTONOMOUS_RUNTIME>
+      <SUB_LABEL>gas mixture definition</SUB_LABEL>
+      <SUB_UNIT>0</SUB_UNIT>
+      <R_STORES_NUMBER>4</R_STORES_NUMBER>
+      <I_STORES_NUMBER>4</I_STORES_NUMBER>
+      <OUTPUT_TYPE>1</OUTPUT_TYPE>
+      <IPARAMS_LIST>
+       <IPARAM>
+        <SUB_ID>1</SUB_ID>
+        <TITLE>gas mixture index</TITLE>
+        <VARNAME>gmi</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>10</DEF_VALUE>
+        <VALUE>10</VALUE>
+        <MIN_VALUE>10</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>2</SUB_ID>
+        <TITLE>fraction print out mode</TITLE>
+        <VARNAME>mode</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>2</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>molar</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>mass</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>3</SUB_ID>
+        <TITLE>number of species</TITLE>
+        <VARNAME>nspec</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>4</DEF_VALUE>
+        <VALUE>4</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>20</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>1</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>2</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>3</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>4</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>5</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>6</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>7</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>8</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>9</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>10</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>11</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>12</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>13</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>14</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>15</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>16</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>17</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>18</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>19</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>20</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>4</SUB_ID>
+        <TITLE>species 1 gas index</TITLE>
+        <VARNAME>gi1</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>5</SUB_ID>
+        <TITLE>species 2 gas index</TITLE>
+        <VARNAME>gi2</VARNAME>
+        <VISIBILITY>(nspec == 2)||(nspec == 3)||(nspec == 4)||(nspec == 5)||(nspec == 6)||(nspec == 7)||(nspec == 8)||(nspec == 9)||(nspec == 10)||(nspec == 11)||(nspec == 12)||(nspec == 13)||(nspec == 14)||(nspec == 15)||(nspec == 16)||(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>2</DEF_VALUE>
+        <VALUE>2</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>6</SUB_ID>
+        <TITLE>species 3 gas index</TITLE>
+        <VARNAME>gi3</VARNAME>
+        <VISIBILITY>(nspec == 3)||(nspec == 4)||(nspec == 5)||(nspec == 6)||(nspec == 7)||(nspec == 8)||(nspec == 9)||(nspec == 10)||(nspec == 11)||(nspec == 12)||(nspec == 13)||(nspec == 14)||(nspec == 15)||(nspec == 16)||(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>3</DEF_VALUE>
+        <VALUE>3</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>7</SUB_ID>
+        <TITLE>species 4 gas index</TITLE>
+        <VARNAME>gi4</VARNAME>
+        <VISIBILITY>(nspec == 4)||(nspec == 5)||(nspec == 6)||(nspec == 7)||(nspec == 8)||(nspec == 9)||(nspec == 10)||(nspec == 11)||(nspec == 12)||(nspec == 13)||(nspec == 14)||(nspec == 15)||(nspec == 16)||(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>4</DEF_VALUE>
+        <VALUE>4</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>8</SUB_ID>
+        <TITLE>species 5 gas index</TITLE>
+        <VARNAME>gi5</VARNAME>
+        <VISIBILITY>(nspec == 5)||(nspec == 6)||(nspec == 7)||(nspec == 8)||(nspec == 9)||(nspec == 10)||(nspec == 11)||(nspec == 12)||(nspec == 13)||(nspec == 14)||(nspec == 15)||(nspec == 16)||(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>5</DEF_VALUE>
+        <VALUE>5</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>9</SUB_ID>
+        <TITLE>species 6 gas index</TITLE>
+        <VARNAME>gi6</VARNAME>
+        <VISIBILITY>(nspec == 6)||(nspec == 7)||(nspec == 8)||(nspec == 9)||(nspec == 10)||(nspec == 11)||(nspec == 12)||(nspec == 13)||(nspec == 14)||(nspec == 15)||(nspec == 16)||(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>6</DEF_VALUE>
+        <VALUE>6</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>10</SUB_ID>
+        <TITLE>species 7 gas index</TITLE>
+        <VARNAME>gi7</VARNAME>
+        <VISIBILITY>(nspec == 7)||(nspec == 8)||(nspec == 9)||(nspec == 10)||(nspec == 11)||(nspec == 12)||(nspec == 13)||(nspec == 14)||(nspec == 15)||(nspec == 16)||(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>7</DEF_VALUE>
+        <VALUE>7</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>11</SUB_ID>
+        <TITLE>species 8 gas index</TITLE>
+        <VARNAME>gi8</VARNAME>
+        <VISIBILITY>(nspec == 8)||(nspec == 9)||(nspec == 10)||(nspec == 11)||(nspec == 12)||(nspec == 13)||(nspec == 14)||(nspec == 15)||(nspec == 16)||(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>8</DEF_VALUE>
+        <VALUE>8</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>12</SUB_ID>
+        <TITLE>species 9 gas index</TITLE>
+        <VARNAME>gi9</VARNAME>
+        <VISIBILITY>(nspec == 9)||(nspec == 10)||(nspec == 11)||(nspec == 12)||(nspec == 13)||(nspec == 14)||(nspec == 15)||(nspec == 16)||(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>9</DEF_VALUE>
+        <VALUE>9</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>13</SUB_ID>
+        <TITLE>species 10 gas index</TITLE>
+        <VARNAME>gi10</VARNAME>
+        <VISIBILITY>(nspec == 10)||(nspec == 11)||(nspec == 12)||(nspec == 13)||(nspec == 14)||(nspec == 15)||(nspec == 16)||(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>10</DEF_VALUE>
+        <VALUE>10</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>14</SUB_ID>
+        <TITLE>species 11 gas index</TITLE>
+        <VARNAME>gi11</VARNAME>
+        <VISIBILITY>(nspec == 11)||(nspec == 12)||(nspec == 13)||(nspec == 14)||(nspec == 15)||(nspec == 16)||(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>11</DEF_VALUE>
+        <VALUE>11</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>15</SUB_ID>
+        <TITLE>species 12 gas index</TITLE>
+        <VARNAME>gi12</VARNAME>
+        <VISIBILITY>(nspec == 12)||(nspec == 13)||(nspec == 14)||(nspec == 15)||(nspec == 16)||(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>12</DEF_VALUE>
+        <VALUE>12</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>16</SUB_ID>
+        <TITLE>species 13 gas index</TITLE>
+        <VARNAME>gi13</VARNAME>
+        <VISIBILITY>(nspec == 13)||(nspec == 14)||(nspec == 15)||(nspec == 16)||(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>13</DEF_VALUE>
+        <VALUE>13</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>17</SUB_ID>
+        <TITLE>species 14 gas index</TITLE>
+        <VARNAME>gi14</VARNAME>
+        <VISIBILITY>(nspec == 14)||(nspec == 15)||(nspec == 16)||(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>14</DEF_VALUE>
+        <VALUE>14</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>18</SUB_ID>
+        <TITLE>species 15 gas index</TITLE>
+        <VARNAME>gi15</VARNAME>
+        <VISIBILITY>(nspec == 15)||(nspec == 16)||(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>15</DEF_VALUE>
+        <VALUE>15</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>19</SUB_ID>
+        <TITLE>species 16 gas index</TITLE>
+        <VARNAME>gi16</VARNAME>
+        <VISIBILITY>(nspec == 16)||(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>16</DEF_VALUE>
+        <VALUE>16</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>20</SUB_ID>
+        <TITLE>species 17 gas index</TITLE>
+        <VARNAME>gi17</VARNAME>
+        <VISIBILITY>(nspec == 17)||(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>17</DEF_VALUE>
+        <VALUE>17</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>21</SUB_ID>
+        <TITLE>species 18 gas index</TITLE>
+        <VARNAME>gi18</VARNAME>
+        <VISIBILITY>(nspec == 18)||(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>18</DEF_VALUE>
+        <VALUE>18</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>22</SUB_ID>
+        <TITLE>species 19 gas index</TITLE>
+        <VARNAME>gi19</VARNAME>
+        <VISIBILITY>(nspec == 19)||(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>19</DEF_VALUE>
+        <VALUE>19</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>23</SUB_ID>
+        <TITLE>species 20 gas index</TITLE>
+        <VARNAME>gi20</VARNAME>
+        <VISIBILITY>(nspec == 20)</VISIBILITY>
+        <DEF_VALUE>20</DEF_VALUE>
+        <VALUE>20</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>24</SUB_ID>
+        <TITLE>handling liquid condensate in gas mixture</TITLE>
+        <VARNAME>handlingFog</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>2</DEF_VALUE>
+        <VALUE>2</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>2</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>no</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD0_handlingFog_no.svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>yes</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD0_handlingFog_yes.svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>25</SUB_ID>
+        <TITLE>rank of the species that can condense</TITLE>
+        <VARNAME>condensateRank</VARNAME>
+        <VISIBILITY>handlingFog==2</VISIBILITY>
+        <DEF_VALUE>4</DEF_VALUE>
+        <VALUE>4</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>20</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>26</SUB_ID>
+        <TITLE>handling of physically incompatible conditions</TITLE>
+        <VARNAME>handlingErrorWarning</VARNAME>
+        <VISIBILITY>handlingFog == 2</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>2</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>warning</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>error</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+      </IPARAMS_LIST>
+      <TPARAMS_LIST>
+       <TPARAM>
+        <SUB_ID>27</SUB_ID>
+        <TITLE>GMdataGases</TITLE>
+        <VARNAME>GMdataGases</VARNAME>
+        <VISIBILITY>False</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/</DEF_VALUE>
+        <VALUE>$AME/libgm/data/</VALUE>
+        <TEXT_TYPE>3</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>28</SUB_ID>
+        <TITLE>GMdataGasesNASA</TITLE>
+        <VARNAME>GMdataGasesNASA</VARNAME>
+        <VISIBILITY>False</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties</VALUE>
+        <TEXT_TYPE>3</TEXT_TYPE>
+       </TPARAM>
+      </TPARAMS_LIST>
+      <ICON_MAP>
+       <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+       <ICON_MAP_DATA>
+        $AME/libgm/Icons/layers/GMGD0_frame.svg
+       </ICON_MAP_DATA>
+      </ICON_MAP>
+      <CIR_PORTS_OVER_FRAMEWORK>0</CIR_PORTS_OVER_FRAMEWORK>
+      <SUBIDS_RESET>0</SUBIDS_RESET>
+     </SUBMODEL>
+    </COMP>
+    <COMP>
+     <COMP_TYPE>0</COMP_TYPE>
+     <ALIAS>gm_gas_data</ALIAS>
+     <COMP_NAME>gm_gas_data</COMP_NAME>
+     <COMP_DISPLAYNAME>gm_gas_data</COMP_DISPLAYNAME>
+     <COMP_ICON_DESCRIPTION>gas mixture gas data</COMP_ICON_DESCRIPTION>
+     <COMP_LIBRARY_ID>gasmixture.gm_gas_data</COMP_LIBRARY_ID>
+     <COMP_POS>87 74</COMP_POS>
+     <COMP_DEPTH>202</COMP_DEPTH>
+     <CIR_COMP_ICON>
+      <CIR_ICON_IDENTITY>1</CIR_ICON_IDENTITY>
+      <ICON_MAP>
+       <ICON_MAP_FORMAT>svgz/base64</ICON_MAP_FORMAT>
+       <ICON_MAP_DATA>
+        H4sIAAAAAAACCpVSPU/DMBDd+ytO1yEwNB+tEE0VpwIhWBgYYEYmddJTnTiyrSTl13NJPyYGsCz7fH733jvL2XaoNXTKOjKNCJIwDkA1hdlRU4ng4/15sQ62+SxzXQWMbJzAvfftJor6vg/7VWhsFS3jOI4YgSfIZtDUHH4DJmmaRtMtXjUxCZcIX9KpN2tK0kqgp+aIQDuBr9Qprc1nwtQC43ZAOJ73nnZ+L3CVjoe9omrvL6eOVP9oxgKIYZXyRDCsV2rTC3SFNVpPXjeulQULtlY5ZTuF3GmVzwAgK8gWWgEb0gLn5TQQnLfmwAXzeBqXxOJsZnlN1OSV1cQbN8i4gt0kaXjH0fESWQ7WHEQnRa8GD97KxpXG1gJr6S0NNwmMXSTAJZDc3yKUpvGLUtakmSl4sCR1cM46+lajHj9C/iJdFo2cf2JnH7D8B/uT9PJCn0XVuPAHyH8AHV0FmE8CAAA=
+       </ICON_MAP_DATA>
+      </ICON_MAP>
+      <CIR_PORT_GRAPHICS>
+       IDxQT1JUUy8+Cg==
+      </CIR_PORT_GRAPHICS>
+      <CIR_PORT_HIDDEN>0</CIR_PORT_HIDDEN>
+     </CIR_COMP_ICON>
+     <COMP_SCALE_X>1.000000</COMP_SCALE_X>
+     <COMP_SCALE_Y>1.000000</COMP_SCALE_Y>
+     <COMP_GEOMETRY>1</COMP_GEOMETRY>
+     <LABEL_POS>0 0 0 0</LABEL_POS>
+     <LABEL_VISIBLE>0</LABEL_VISIBLE>
+     <CIRCUIT_SCOPE_ID>2</CIRCUIT_SCOPE_ID>
+     <SUBMODEL>
+      <CODE_GEN_VERSION>1.0</CODE_GEN_VERSION>
+      <SUB_TYPE>2</SUB_TYPE>
+      <SUB_NAME>GMGD00</SUB_NAME>
+      <SUB_DIR>$AME/libgm/submodels</SUB_DIR>
+      <SUB_ID_MAX>41</SUB_ID_MAX>
+      <CUSTOM_NAME>GMGD_NITROGEN</CUSTOM_NAME>
+      <CUSTOM_DIR>$AME/libgm/submodels</CUSTOM_DIR>
+      <AUTONOMOUS_COMPILATION>False</AUTONOMOUS_COMPILATION>
+      <AUTONOMOUS_RUNTIME>False</AUTONOMOUS_RUNTIME>
+      <SUB_LABEL>gas definition for nitrogen (N2)</SUB_LABEL>
+      <SUB_UNIT>0</SUB_UNIT>
+      <I_STORES_NUMBER>1</I_STORES_NUMBER>
+      <HAS_PREINIT>1</HAS_PREINIT>
+      <OUTPUT_TYPE>1</OUTPUT_TYPE>
+      <RPARAMS_LIST>
+       <RPARAM>
+        <SUB_ID>13</SUB_ID>
+        <TITLE>constant-pressure specific heat (Cp)</TITLE>
+        <CUSTOM_TITLE>constant-pressure specific heat (Cp)</CUSTOM_TITLE>
+        <VARNAME>cp</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==2)||(gasSetting==3)||(gasSetting==5))</VISIBILITY>
+        <DEF_VALUE>1.00520000000000e+03</DEF_VALUE>
+        <VALUE>1.00520000000000e+03</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+05</MAX_VALUE>
+        <UNITS>J/kg/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>14</SUB_ID>
+        <TITLE>constant-volume specific heat (Cv)</TITLE>
+        <CUSTOM_TITLE>constant-volume specific heat (Cv)</CUSTOM_TITLE>
+        <VARNAME>cv</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==2)||(gasSetting==4)||(gasSetting==6))</VISIBILITY>
+        <DEF_VALUE>7.18000000000000e+02</DEF_VALUE>
+        <VALUE>7.18000000000000e+02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+05</MAX_VALUE>
+        <UNITS>J/kg/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>15</SUB_ID>
+        <TITLE>specific heat ratio (gamma)</TITLE>
+        <CUSTOM_TITLE>specific heat ratio (gamma)</CUSTOM_TITLE>
+        <VARNAME>gamma</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==1)||(gasSetting==3)||(gasSetting==4))</VISIBILITY>
+        <DEF_VALUE>1.40000000000000e+00</DEF_VALUE>
+        <VALUE>1.40000000000000e+00</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+01</MAX_VALUE>
+        <UNITS>null</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>16</SUB_ID>
+        <TITLE>specific gas constant (r)</TITLE>
+        <CUSTOM_TITLE>specific gas constant (r)</CUSTOM_TITLE>
+        <VARNAME>rGas</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==1)||(gasSetting==5)||(gasSetting==6))</VISIBILITY>
+        <DEF_VALUE>2.87200000000000e+02</DEF_VALUE>
+        <VALUE>2.87200000000000e+02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+04</MAX_VALUE>
+        <UNITS>J/kg/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>17</SUB_ID>
+        <TITLE>absolute viscosity (mu)</TITLE>
+        <CUSTOM_TITLE>absolute viscosity (mu)</CUSTOM_TITLE>
+        <VARNAME>mu</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1)</VISIBILITY>
+        <DEF_VALUE>1.82000000000000e-02</DEF_VALUE>
+        <VALUE>1.82000000000000e-02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+03</MAX_VALUE>
+        <UNITS>cP</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>18</SUB_ID>
+        <TITLE>thermal conductivity</TITLE>
+        <CUSTOM_TITLE>thermal conductivity</CUSTOM_TITLE>
+        <VARNAME>lam</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1)</VISIBILITY>
+        <DEF_VALUE>2.64000000000000e-02</DEF_VALUE>
+        <VALUE>2.64000000000000e-02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+06</MAX_VALUE>
+        <UNITS>W/m/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>32</SUB_ID>
+        <TITLE>molar mass</TITLE>
+        <CUSTOM_TITLE>molar mass</CUSTOM_TITLE>
+        <VARNAME>M</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==2)</VISIBILITY>
+        <DEF_VALUE>2.89651300000000e+01</DEF_VALUE>
+        <VALUE>2.89651300000000e+01</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+30</MAX_VALUE>
+        <UNITS>g/mol</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>36</SUB_ID>
+        <TITLE>operating temperature</TITLE>
+        <CUSTOM_TITLE>operating temperature</CUSTOM_TITLE>
+        <VARNAME>operatingTempK</VARNAME>
+        <VISIBILITY>!(fluidType==1) && (eosType==1)</VISIBILITY>
+        <DEF_VALUE>2.98150000000000e+02</DEF_VALUE>
+        <VALUE>2.98150000000000e+02</VALUE>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+30</MAX_VALUE>
+        <UNITS>K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>38</SUB_ID>
+        <TITLE>enthalpy of formation</TITLE>
+        <CUSTOM_TITLE>enthalpy of formation</CUSTOM_TITLE>
+        <VARNAME>enthForm</VARNAME>
+        <VISIBILITY>(fluidType==1) &&( (eosType==1)||(eosType==2))</VISIBILITY>
+        <DEF_VALUE>-1.25530000000000e+02</DEF_VALUE>
+        <VALUE>-1.25530000000000e+02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>-1.00000000000000e+30</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+30</MAX_VALUE>
+        <UNITS>J/mol</UNITS>
+       </RPARAM>
+      </RPARAMS_LIST>
+      <IPARAMS_LIST>
+       <IPARAM>
+        <SUB_ID>1</SUB_ID>
+        <TITLE>gas type index</TITLE>
+        <VARNAME>gi</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>6</SUB_ID>
+        <TITLE>fluid definition</TITLE>
+        <VARNAME>fluidType</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>25</DEF_VALUE>
+        <VALUE>25</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>37</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>user defined</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_userdefined.svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>air</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_air.svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>exhaust, stoichio</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_exhaust,stoichio.svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>ammonia (NH3)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_ammonia(NH3).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>argon (Ar)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_argon(Ar).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>butane (C4H10)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_butane(C4H10).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>carbon dioxide (CO2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_carbondioxide(CO2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>carbon monoxide (CO)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_carbonmonoxide(CO).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>decane (C10H22)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_decane(C10H22).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>ethane (C2H6)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_ethane(C2H6).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>ethylene (C2H4)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_ethylene(C2H4).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>helium (He)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_helium(He).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>heptane (C7H16)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_heptane(C7H16).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>hexane (C6H14)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_hexane(C6H14).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>hydrogen (H2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_hydrogen(H2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>hydrogen sulfide (H2S)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_hydrogensulfide(H2S).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>iso butane (C4H10)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_isobutane(C4H10).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>iso pentane (C5H12)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_isopentane(C5H12).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>krypton (Kr)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_krypton(Kr).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>methane (CH4)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_methane(CH4).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>methanol (CH3OH)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_methanol(CH3OH).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>neon (Ne)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_neon(Ne).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitric acid (HNO3)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitricacid(HNO3).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitric oxide (NO)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitricoxide(NO).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitrogen (N2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitrogen(N2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitrogen dioxide (NO2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitrogendioxide(NO2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitrous oxide (N2O)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitrousoxide(N2O).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nonane (C9H20)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nonane(C9H20).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>octane (C8H18)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_octane(C8H18).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>oxygen (O2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_oxygen(O2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>pentane (C5H12)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_pentane(C5H12).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>propane (C3H8)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_propane(C3H8).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>sulfur hexafluoride (SF6)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_sulfurhexafluoride(SF6).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>sulfuric acid (H2SO4)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_sulfuricacid(H2SO4).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>sulfur trioxide (SO3)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_sulfurtrioxide(SO3).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>water vapor (H2O)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_watervapor(H2O).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>xenon (Xe)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_xenon(Xe).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>33</SUB_ID>
+        <TITLE>properties definition</TITLE>
+        <VARNAME>eosType</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>2</DEF_VALUE>
+        <VALUE>2</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>6</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>perfect</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>semi perfect</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Van der Waals</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Redlich - Kwong</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Redlich - Kwong - Soave</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Peng - Robinson</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>21</SUB_ID>
+        <TITLE>setting properties through</TITLE>
+        <VARNAME>gasSetting</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1)</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>6</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>gamma + r</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>Cp + Cv</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>gamma + Cp</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>gamma + Cv</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>r + Cp</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>r + Cv</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+      </IPARAMS_LIST>
+      <TPARAMS_LIST>
+       <TPARAM>
+        <SUB_ID>27</SUB_ID>
+        <TITLE>filename for equation of state coefficients</TITLE>
+        <CUSTOM_TITLE>filename for equation of state coefficients</CUSTOM_TITLE>
+        <VARNAME>eosFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=3)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_eos.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_eos.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>28</SUB_ID>
+        <TITLE>filename for Cp, h and s coefficients</TITLE>
+        <CUSTOM_TITLE>filename for Cp, h and s coefficients</CUSTOM_TITLE>
+        <VARNAME>cphsFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=2)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_cp_h_s.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_cp_h_s.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>29</SUB_ID>
+        <TITLE>filename for mu coefficients</TITLE>
+        <CUSTOM_TITLE>filename for mu coefficients</CUSTOM_TITLE>
+        <VARNAME>muFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=2)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_mu.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_mu.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>30</SUB_ID>
+        <TITLE>filename for lambda coefficients</TITLE>
+        <CUSTOM_TITLE>filename for lambda coefficients</CUSTOM_TITLE>
+        <VARNAME>lambdaFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=2)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_lambda.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_lambda.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>4</SUB_ID>
+        <TITLE>name of the gas</TITLE>
+        <CUSTOM_TITLE>name of the gas</CUSTOM_TITLE>
+        <VARNAME>gasName</VARNAME>
+        <VISIBILITY>fluidType==1</VISIBILITY>
+        <DEF_VALUE>predefined nitrogen (N2)</DEF_VALUE>
+        <VALUE>predefined nitrogen (N2)</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>39</SUB_ID>
+        <TITLE>GMdataGases</TITLE>
+        <CUSTOM_TITLE>GMdataGases</CUSTOM_TITLE>
+        <VARNAME>GMdataGases</VARNAME>
+        <VISIBILITY>False</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/</DEF_VALUE>
+        <VALUE>$AME/libgm/data/</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>3</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>40</SUB_ID>
+        <TITLE>GMdataGasesNASA</TITLE>
+        <CUSTOM_TITLE>GMdataGasesNASA</CUSTOM_TITLE>
+        <VARNAME>GMdataGasesNASA</VARNAME>
+        <VISIBILITY>False</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>3</TEXT_TYPE>
+       </TPARAM>
+      </TPARAMS_LIST>
+      <PARAMS_GROUPS_LIST>
+       <PARAMS_GROUP>
+        <ORIG_TITLE>ROOTGROUP</ORIG_TITLE>
+        <CUSTOM_TITLE>ROOTGROUP</CUSTOM_TITLE>
+        <NAME>ROOTGROUP</NAME>
+        <SUB_ID>41</SUB_ID>
+        <CIRCUIT_SCOPE_ID>7463</CIRCUIT_SCOPE_ID>
+        <EDITABLE_TITLE>1</EDITABLE_TITLE>
+        <GROUP_HEAD_ICON></GROUP_HEAD_ICON>
+        <PARAM_GROUP_ELEMENT_LIST>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gi</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>fluidType</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>eosType</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gasSetting</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>cp</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>cv</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gamma</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>rGas</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>mu</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>lam</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>M</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>operatingTempK</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>enthForm</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>eosFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>cphsFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>muFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>lambdaFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gasName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>GMdataGases</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>GMdataGasesNASA</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+        </PARAM_GROUP_ELEMENT_LIST>
+        <EDITABLE>0</EDITABLE>
+       </PARAMS_GROUP>
+      </PARAMS_GROUPS_LIST>
+      <ICON_MAP>
+       <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+       <ICON_MAP_DATA>
+        $AME/libgm/Icons/layers/GMGD00_frame.svg
+       </ICON_MAP_DATA>
+      </ICON_MAP>
+      <CIR_PORTS_OVER_FRAMEWORK>0</CIR_PORTS_OVER_FRAMEWORK>
+      <SUBIDS_RESET>0</SUBIDS_RESET>
+     </SUBMODEL>
+    </COMP>
+    <COMP>
+     <COMP_TYPE>0</COMP_TYPE>
+     <ALIAS>gm_gas_data_1</ALIAS>
+     <COMP_NAME>gm_gas_data</COMP_NAME>
+     <COMP_DISPLAYNAME>gm_gas_data</COMP_DISPLAYNAME>
+     <COMP_ICON_DESCRIPTION>gas mixture gas data</COMP_ICON_DESCRIPTION>
+     <COMP_LIBRARY_ID>gasmixture.gm_gas_data</COMP_LIBRARY_ID>
+     <COMP_POS>87 124</COMP_POS>
+     <COMP_DEPTH>203</COMP_DEPTH>
+     <CIR_COMP_ICON>
+      <CIR_ICON_IDENTITY>1</CIR_ICON_IDENTITY>
+      <ICON_MAP>
+       <ICON_MAP_FORMAT>svgz/base64</ICON_MAP_FORMAT>
+       <ICON_MAP_DATA>
+        H4sIAAAAAAACCpVSPU/DMBDd+ytO1yEwNB+tEE0VpwIhWBgYYEYmddJTnTiyrSTl13NJPyYGsCz7fH733jvL2XaoNXTKOjKNCJIwDkA1hdlRU4ng4/15sQ62+SxzXQWMbJzAvfftJor6vg/7VWhsFS3jOI4YgSfIZtDUHH4DJmmaRtMtXjUxCZcIX9KpN2tK0kqgp+aIQDuBr9Qprc1nwtQC43ZAOJ73nnZ+L3CVjoe9omrvL6eOVP9oxgKIYZXyRDCsV2rTC3SFNVpPXjeulQULtlY5ZTuF3GmVzwAgK8gWWgEb0gLn5TQQnLfmwAXzeBqXxOJsZnlN1OSV1cQbN8i4gt0kaXjH0fESWQ7WHEQnRa8GD97KxpXG1gJr6S0NNwmMXSTAJZDc3yKUpvGLUtakmSl4sCR1cM46+lajHj9C/iJdFo2cf2JnH7D8B/uT9PJCn0XVuPAHyH8AHV0FmE8CAAA=
+       </ICON_MAP_DATA>
+      </ICON_MAP>
+      <CIR_PORT_GRAPHICS>
+       IDxQT1JUUy8+Cg==
+      </CIR_PORT_GRAPHICS>
+      <CIR_PORT_HIDDEN>0</CIR_PORT_HIDDEN>
+     </CIR_COMP_ICON>
+     <COMP_SCALE_X>1.000000</COMP_SCALE_X>
+     <COMP_SCALE_Y>1.000000</COMP_SCALE_Y>
+     <COMP_GEOMETRY>1</COMP_GEOMETRY>
+     <LABEL_POS>0 0 0 0</LABEL_POS>
+     <LABEL_VISIBLE>0</LABEL_VISIBLE>
+     <CIRCUIT_SCOPE_ID>3</CIRCUIT_SCOPE_ID>
+     <SUBMODEL>
+      <CODE_GEN_VERSION>1.0</CODE_GEN_VERSION>
+      <SUB_TYPE>2</SUB_TYPE>
+      <SUB_NAME>GMGD00</SUB_NAME>
+      <SUB_DIR>$AME/libgm/submodels</SUB_DIR>
+      <SUB_ID_MAX>41</SUB_ID_MAX>
+      <CUSTOM_NAME>GMGD_OXYGEN</CUSTOM_NAME>
+      <CUSTOM_DIR>$AME/libgm/submodels</CUSTOM_DIR>
+      <AUTONOMOUS_COMPILATION>False</AUTONOMOUS_COMPILATION>
+      <AUTONOMOUS_RUNTIME>False</AUTONOMOUS_RUNTIME>
+      <SUB_LABEL>gas definition for oxygen (O2)</SUB_LABEL>
+      <SUB_UNIT>0</SUB_UNIT>
+      <I_STORES_NUMBER>1</I_STORES_NUMBER>
+      <HAS_PREINIT>1</HAS_PREINIT>
+      <OUTPUT_TYPE>1</OUTPUT_TYPE>
+      <RPARAMS_LIST>
+       <RPARAM>
+        <SUB_ID>13</SUB_ID>
+        <TITLE>constant-pressure specific heat (Cp)</TITLE>
+        <CUSTOM_TITLE>constant-pressure specific heat (Cp)</CUSTOM_TITLE>
+        <VARNAME>cp</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==2)||(gasSetting==3)||(gasSetting==5))</VISIBILITY>
+        <DEF_VALUE>1.00520000000000e+03</DEF_VALUE>
+        <VALUE>1.00520000000000e+03</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+05</MAX_VALUE>
+        <UNITS>J/kg/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>14</SUB_ID>
+        <TITLE>constant-volume specific heat (Cv)</TITLE>
+        <CUSTOM_TITLE>constant-volume specific heat (Cv)</CUSTOM_TITLE>
+        <VARNAME>cv</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==2)||(gasSetting==4)||(gasSetting==6))</VISIBILITY>
+        <DEF_VALUE>7.18000000000000e+02</DEF_VALUE>
+        <VALUE>7.18000000000000e+02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+05</MAX_VALUE>
+        <UNITS>J/kg/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>15</SUB_ID>
+        <TITLE>specific heat ratio (gamma)</TITLE>
+        <CUSTOM_TITLE>specific heat ratio (gamma)</CUSTOM_TITLE>
+        <VARNAME>gamma</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==1)||(gasSetting==3)||(gasSetting==4))</VISIBILITY>
+        <DEF_VALUE>1.40000000000000e+00</DEF_VALUE>
+        <VALUE>1.40000000000000e+00</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+01</MAX_VALUE>
+        <UNITS>null</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>16</SUB_ID>
+        <TITLE>specific gas constant (r)</TITLE>
+        <CUSTOM_TITLE>specific gas constant (r)</CUSTOM_TITLE>
+        <VARNAME>rGas</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==1)||(gasSetting==5)||(gasSetting==6))</VISIBILITY>
+        <DEF_VALUE>2.87200000000000e+02</DEF_VALUE>
+        <VALUE>2.87200000000000e+02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+04</MAX_VALUE>
+        <UNITS>J/kg/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>17</SUB_ID>
+        <TITLE>absolute viscosity (mu)</TITLE>
+        <CUSTOM_TITLE>absolute viscosity (mu)</CUSTOM_TITLE>
+        <VARNAME>mu</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1)</VISIBILITY>
+        <DEF_VALUE>1.82000000000000e-02</DEF_VALUE>
+        <VALUE>1.82000000000000e-02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+03</MAX_VALUE>
+        <UNITS>cP</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>18</SUB_ID>
+        <TITLE>thermal conductivity</TITLE>
+        <CUSTOM_TITLE>thermal conductivity</CUSTOM_TITLE>
+        <VARNAME>lam</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1)</VISIBILITY>
+        <DEF_VALUE>2.64000000000000e-02</DEF_VALUE>
+        <VALUE>2.64000000000000e-02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+06</MAX_VALUE>
+        <UNITS>W/m/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>32</SUB_ID>
+        <TITLE>molar mass</TITLE>
+        <CUSTOM_TITLE>molar mass</CUSTOM_TITLE>
+        <VARNAME>M</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==2)</VISIBILITY>
+        <DEF_VALUE>2.89651300000000e+01</DEF_VALUE>
+        <VALUE>2.89651300000000e+01</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+30</MAX_VALUE>
+        <UNITS>g/mol</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>36</SUB_ID>
+        <TITLE>operating temperature</TITLE>
+        <CUSTOM_TITLE>operating temperature</CUSTOM_TITLE>
+        <VARNAME>operatingTempK</VARNAME>
+        <VISIBILITY>!(fluidType==1) && (eosType==1)</VISIBILITY>
+        <DEF_VALUE>2.98150000000000e+02</DEF_VALUE>
+        <VALUE>2.98150000000000e+02</VALUE>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+30</MAX_VALUE>
+        <UNITS>K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>38</SUB_ID>
+        <TITLE>enthalpy of formation</TITLE>
+        <CUSTOM_TITLE>enthalpy of formation</CUSTOM_TITLE>
+        <VARNAME>enthForm</VARNAME>
+        <VISIBILITY>(fluidType==1) &&( (eosType==1)||(eosType==2))</VISIBILITY>
+        <DEF_VALUE>-1.25530000000000e+02</DEF_VALUE>
+        <VALUE>-1.25530000000000e+02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>-1.00000000000000e+30</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+30</MAX_VALUE>
+        <UNITS>J/mol</UNITS>
+       </RPARAM>
+      </RPARAMS_LIST>
+      <IPARAMS_LIST>
+       <IPARAM>
+        <SUB_ID>1</SUB_ID>
+        <TITLE>gas type index</TITLE>
+        <VARNAME>gi</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>2</DEF_VALUE>
+        <VALUE>2</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>6</SUB_ID>
+        <TITLE>fluid definition</TITLE>
+        <VARNAME>fluidType</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>30</DEF_VALUE>
+        <VALUE>30</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>37</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>user defined</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_userdefined.svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>air</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_air.svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>exhaust, stoichio</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_exhaust,stoichio.svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>ammonia (NH3)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_ammonia(NH3).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>argon (Ar)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_argon(Ar).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>butane (C4H10)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_butane(C4H10).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>carbon dioxide (CO2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_carbondioxide(CO2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>carbon monoxide (CO)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_carbonmonoxide(CO).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>decane (C10H22)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_decane(C10H22).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>ethane (C2H6)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_ethane(C2H6).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>ethylene (C2H4)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_ethylene(C2H4).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>helium (He)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_helium(He).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>heptane (C7H16)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_heptane(C7H16).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>hexane (C6H14)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_hexane(C6H14).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>hydrogen (H2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_hydrogen(H2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>hydrogen sulfide (H2S)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_hydrogensulfide(H2S).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>iso butane (C4H10)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_isobutane(C4H10).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>iso pentane (C5H12)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_isopentane(C5H12).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>krypton (Kr)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_krypton(Kr).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>methane (CH4)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_methane(CH4).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>methanol (CH3OH)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_methanol(CH3OH).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>neon (Ne)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_neon(Ne).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitric acid (HNO3)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitricacid(HNO3).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitric oxide (NO)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitricoxide(NO).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitrogen (N2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitrogen(N2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitrogen dioxide (NO2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitrogendioxide(NO2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitrous oxide (N2O)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitrousoxide(N2O).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nonane (C9H20)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nonane(C9H20).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>octane (C8H18)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_octane(C8H18).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>oxygen (O2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_oxygen(O2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>pentane (C5H12)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_pentane(C5H12).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>propane (C3H8)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_propane(C3H8).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>sulfur hexafluoride (SF6)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_sulfurhexafluoride(SF6).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>sulfuric acid (H2SO4)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_sulfuricacid(H2SO4).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>sulfur trioxide (SO3)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_sulfurtrioxide(SO3).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>water vapor (H2O)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_watervapor(H2O).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>xenon (Xe)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_xenon(Xe).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>33</SUB_ID>
+        <TITLE>properties definition</TITLE>
+        <VARNAME>eosType</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>2</DEF_VALUE>
+        <VALUE>2</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>6</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>perfect</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>semi perfect</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Van der Waals</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Redlich - Kwong</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Redlich - Kwong - Soave</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Peng - Robinson</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>21</SUB_ID>
+        <TITLE>setting properties through</TITLE>
+        <VARNAME>gasSetting</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1)</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>6</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>gamma + r</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>Cp + Cv</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>gamma + Cp</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>gamma + Cv</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>r + Cp</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>r + Cv</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+      </IPARAMS_LIST>
+      <TPARAMS_LIST>
+       <TPARAM>
+        <SUB_ID>27</SUB_ID>
+        <TITLE>filename for equation of state coefficients</TITLE>
+        <CUSTOM_TITLE>filename for equation of state coefficients</CUSTOM_TITLE>
+        <VARNAME>eosFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=3)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_eos.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_eos.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>28</SUB_ID>
+        <TITLE>filename for Cp, h and s coefficients</TITLE>
+        <CUSTOM_TITLE>filename for Cp, h and s coefficients</CUSTOM_TITLE>
+        <VARNAME>cphsFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=2)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_cp_h_s.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_cp_h_s.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>29</SUB_ID>
+        <TITLE>filename for mu coefficients</TITLE>
+        <CUSTOM_TITLE>filename for mu coefficients</CUSTOM_TITLE>
+        <VARNAME>muFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=2)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_mu.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_mu.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>30</SUB_ID>
+        <TITLE>filename for lambda coefficients</TITLE>
+        <CUSTOM_TITLE>filename for lambda coefficients</CUSTOM_TITLE>
+        <VARNAME>lambdaFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=2)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_lambda.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_lambda.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>4</SUB_ID>
+        <TITLE>name of the gas</TITLE>
+        <CUSTOM_TITLE>name of the gas</CUSTOM_TITLE>
+        <VARNAME>gasName</VARNAME>
+        <VISIBILITY>fluidType==1</VISIBILITY>
+        <DEF_VALUE>predefined oxygen (O2)</DEF_VALUE>
+        <VALUE>predefined oxygen (O2)</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>39</SUB_ID>
+        <TITLE>GMdataGases</TITLE>
+        <CUSTOM_TITLE>GMdataGases</CUSTOM_TITLE>
+        <VARNAME>GMdataGases</VARNAME>
+        <VISIBILITY>False</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/</DEF_VALUE>
+        <VALUE>$AME/libgm/data/</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>3</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>40</SUB_ID>
+        <TITLE>GMdataGasesNASA</TITLE>
+        <CUSTOM_TITLE>GMdataGasesNASA</CUSTOM_TITLE>
+        <VARNAME>GMdataGasesNASA</VARNAME>
+        <VISIBILITY>False</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>3</TEXT_TYPE>
+       </TPARAM>
+      </TPARAMS_LIST>
+      <PARAMS_GROUPS_LIST>
+       <PARAMS_GROUP>
+        <ORIG_TITLE>ROOTGROUP</ORIG_TITLE>
+        <CUSTOM_TITLE>ROOTGROUP</CUSTOM_TITLE>
+        <NAME>ROOTGROUP</NAME>
+        <SUB_ID>41</SUB_ID>
+        <CIRCUIT_SCOPE_ID>6475</CIRCUIT_SCOPE_ID>
+        <EDITABLE_TITLE>1</EDITABLE_TITLE>
+        <GROUP_HEAD_ICON></GROUP_HEAD_ICON>
+        <PARAM_GROUP_ELEMENT_LIST>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gi</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>fluidType</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>eosType</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gasSetting</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>cp</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>cv</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gamma</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>rGas</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>mu</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>lam</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>M</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>operatingTempK</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>enthForm</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>eosFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>cphsFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>muFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>lambdaFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gasName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>GMdataGases</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>GMdataGasesNASA</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+        </PARAM_GROUP_ELEMENT_LIST>
+        <EDITABLE>0</EDITABLE>
+       </PARAMS_GROUP>
+      </PARAMS_GROUPS_LIST>
+      <ICON_MAP>
+       <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+       <ICON_MAP_DATA>
+        $AME/libgm/Icons/layers/GMGD00_frame.svg
+       </ICON_MAP_DATA>
+      </ICON_MAP>
+      <CIR_PORTS_OVER_FRAMEWORK>0</CIR_PORTS_OVER_FRAMEWORK>
+      <SUBIDS_RESET>0</SUBIDS_RESET>
+     </SUBMODEL>
+    </COMP>
+    <COMP>
+     <COMP_TYPE>0</COMP_TYPE>
+     <ALIAS>gm_gas_data_2</ALIAS>
+     <COMP_NAME>gm_gas_data</COMP_NAME>
+     <COMP_DISPLAYNAME>gm_gas_data</COMP_DISPLAYNAME>
+     <COMP_ICON_DESCRIPTION>gas mixture gas data</COMP_ICON_DESCRIPTION>
+     <COMP_LIBRARY_ID>gasmixture.gm_gas_data</COMP_LIBRARY_ID>
+     <COMP_POS>87 172</COMP_POS>
+     <COMP_DEPTH>204</COMP_DEPTH>
+     <CIR_COMP_ICON>
+      <CIR_ICON_IDENTITY>1</CIR_ICON_IDENTITY>
+      <ICON_MAP>
+       <ICON_MAP_FORMAT>svgz/base64</ICON_MAP_FORMAT>
+       <ICON_MAP_DATA>
+        H4sIAAAAAAACCpVSPU/DMBDd+ytO1yEwNB+tEE0VpwIhWBgYYEYmddJTnTiyrSTl13NJPyYGsCz7fH733jvL2XaoNXTKOjKNCJIwDkA1hdlRU4ng4/15sQ62+SxzXQWMbJzAvfftJor6vg/7VWhsFS3jOI4YgSfIZtDUHH4DJmmaRtMtXjUxCZcIX9KpN2tK0kqgp+aIQDuBr9Qprc1nwtQC43ZAOJ73nnZ+L3CVjoe9omrvL6eOVP9oxgKIYZXyRDCsV2rTC3SFNVpPXjeulQULtlY5ZTuF3GmVzwAgK8gWWgEb0gLn5TQQnLfmwAXzeBqXxOJsZnlN1OSV1cQbN8i4gt0kaXjH0fESWQ7WHEQnRa8GD97KxpXG1gJr6S0NNwmMXSTAJZDc3yKUpvGLUtakmSl4sCR1cM46+lajHj9C/iJdFo2cf2JnH7D8B/uT9PJCn0XVuPAHyH8AHV0FmE8CAAA=
+       </ICON_MAP_DATA>
+      </ICON_MAP>
+      <CIR_PORT_GRAPHICS>
+       IDxQT1JUUy8+Cg==
+      </CIR_PORT_GRAPHICS>
+      <CIR_PORT_HIDDEN>0</CIR_PORT_HIDDEN>
+     </CIR_COMP_ICON>
+     <COMP_SCALE_X>1.000000</COMP_SCALE_X>
+     <COMP_SCALE_Y>1.000000</COMP_SCALE_Y>
+     <COMP_GEOMETRY>1</COMP_GEOMETRY>
+     <LABEL_POS>0 0 0 0</LABEL_POS>
+     <LABEL_VISIBLE>0</LABEL_VISIBLE>
+     <CIRCUIT_SCOPE_ID>4</CIRCUIT_SCOPE_ID>
+     <SUBMODEL>
+      <CODE_GEN_VERSION>1.0</CODE_GEN_VERSION>
+      <SUB_TYPE>2</SUB_TYPE>
+      <SUB_NAME>GMGD00</SUB_NAME>
+      <SUB_DIR>$AME/libgm/submodels</SUB_DIR>
+      <SUB_ID_MAX>41</SUB_ID_MAX>
+      <CUSTOM_NAME>GMGD_CARBONDIOXIDE</CUSTOM_NAME>
+      <CUSTOM_DIR>$AME/libgm/submodels</CUSTOM_DIR>
+      <AUTONOMOUS_COMPILATION>False</AUTONOMOUS_COMPILATION>
+      <AUTONOMOUS_RUNTIME>False</AUTONOMOUS_RUNTIME>
+      <SUB_LABEL>gas definition for carbon dioxide (CO2)</SUB_LABEL>
+      <SUB_UNIT>0</SUB_UNIT>
+      <I_STORES_NUMBER>1</I_STORES_NUMBER>
+      <HAS_PREINIT>1</HAS_PREINIT>
+      <OUTPUT_TYPE>1</OUTPUT_TYPE>
+      <RPARAMS_LIST>
+       <RPARAM>
+        <SUB_ID>13</SUB_ID>
+        <TITLE>constant-pressure specific heat (Cp)</TITLE>
+        <CUSTOM_TITLE>constant-pressure specific heat (Cp)</CUSTOM_TITLE>
+        <VARNAME>cp</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==2)||(gasSetting==3)||(gasSetting==5))</VISIBILITY>
+        <DEF_VALUE>1.00520000000000e+03</DEF_VALUE>
+        <VALUE>1.00520000000000e+03</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+05</MAX_VALUE>
+        <UNITS>J/kg/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>14</SUB_ID>
+        <TITLE>constant-volume specific heat (Cv)</TITLE>
+        <CUSTOM_TITLE>constant-volume specific heat (Cv)</CUSTOM_TITLE>
+        <VARNAME>cv</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==2)||(gasSetting==4)||(gasSetting==6))</VISIBILITY>
+        <DEF_VALUE>7.18000000000000e+02</DEF_VALUE>
+        <VALUE>7.18000000000000e+02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+05</MAX_VALUE>
+        <UNITS>J/kg/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>15</SUB_ID>
+        <TITLE>specific heat ratio (gamma)</TITLE>
+        <CUSTOM_TITLE>specific heat ratio (gamma)</CUSTOM_TITLE>
+        <VARNAME>gamma</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==1)||(gasSetting==3)||(gasSetting==4))</VISIBILITY>
+        <DEF_VALUE>1.40000000000000e+00</DEF_VALUE>
+        <VALUE>1.40000000000000e+00</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+01</MAX_VALUE>
+        <UNITS>null</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>16</SUB_ID>
+        <TITLE>specific gas constant (r)</TITLE>
+        <CUSTOM_TITLE>specific gas constant (r)</CUSTOM_TITLE>
+        <VARNAME>rGas</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==1)||(gasSetting==5)||(gasSetting==6))</VISIBILITY>
+        <DEF_VALUE>2.87200000000000e+02</DEF_VALUE>
+        <VALUE>2.87200000000000e+02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+04</MAX_VALUE>
+        <UNITS>J/kg/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>17</SUB_ID>
+        <TITLE>absolute viscosity (mu)</TITLE>
+        <CUSTOM_TITLE>absolute viscosity (mu)</CUSTOM_TITLE>
+        <VARNAME>mu</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1)</VISIBILITY>
+        <DEF_VALUE>1.82000000000000e-02</DEF_VALUE>
+        <VALUE>1.82000000000000e-02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+03</MAX_VALUE>
+        <UNITS>cP</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>18</SUB_ID>
+        <TITLE>thermal conductivity</TITLE>
+        <CUSTOM_TITLE>thermal conductivity</CUSTOM_TITLE>
+        <VARNAME>lam</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1)</VISIBILITY>
+        <DEF_VALUE>2.64000000000000e-02</DEF_VALUE>
+        <VALUE>2.64000000000000e-02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+06</MAX_VALUE>
+        <UNITS>W/m/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>32</SUB_ID>
+        <TITLE>molar mass</TITLE>
+        <CUSTOM_TITLE>molar mass</CUSTOM_TITLE>
+        <VARNAME>M</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==2)</VISIBILITY>
+        <DEF_VALUE>2.89651300000000e+01</DEF_VALUE>
+        <VALUE>2.89651300000000e+01</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+30</MAX_VALUE>
+        <UNITS>g/mol</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>36</SUB_ID>
+        <TITLE>operating temperature</TITLE>
+        <CUSTOM_TITLE>operating temperature</CUSTOM_TITLE>
+        <VARNAME>operatingTempK</VARNAME>
+        <VISIBILITY>!(fluidType==1) && (eosType==1)</VISIBILITY>
+        <DEF_VALUE>2.98150000000000e+02</DEF_VALUE>
+        <VALUE>2.98150000000000e+02</VALUE>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+30</MAX_VALUE>
+        <UNITS>K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>38</SUB_ID>
+        <TITLE>enthalpy of formation</TITLE>
+        <CUSTOM_TITLE>enthalpy of formation</CUSTOM_TITLE>
+        <VARNAME>enthForm</VARNAME>
+        <VISIBILITY>(fluidType==1) &&( (eosType==1)||(eosType==2))</VISIBILITY>
+        <DEF_VALUE>-1.25530000000000e+02</DEF_VALUE>
+        <VALUE>-1.25530000000000e+02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>-1.00000000000000e+30</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+30</MAX_VALUE>
+        <UNITS>J/mol</UNITS>
+       </RPARAM>
+      </RPARAMS_LIST>
+      <IPARAMS_LIST>
+       <IPARAM>
+        <SUB_ID>1</SUB_ID>
+        <TITLE>gas type index</TITLE>
+        <VARNAME>gi</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>3</DEF_VALUE>
+        <VALUE>3</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>6</SUB_ID>
+        <TITLE>fluid definition</TITLE>
+        <VARNAME>fluidType</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>7</DEF_VALUE>
+        <VALUE>7</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>37</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>user defined</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_userdefined.svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>air</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_air.svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>exhaust, stoichio</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_exhaust,stoichio.svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>ammonia (NH3)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_ammonia(NH3).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>argon (Ar)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_argon(Ar).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>butane (C4H10)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_butane(C4H10).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>carbon dioxide (CO2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_carbondioxide(CO2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>carbon monoxide (CO)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_carbonmonoxide(CO).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>decane (C10H22)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_decane(C10H22).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>ethane (C2H6)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_ethane(C2H6).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>ethylene (C2H4)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_ethylene(C2H4).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>helium (He)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_helium(He).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>heptane (C7H16)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_heptane(C7H16).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>hexane (C6H14)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_hexane(C6H14).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>hydrogen (H2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_hydrogen(H2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>hydrogen sulfide (H2S)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_hydrogensulfide(H2S).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>iso butane (C4H10)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_isobutane(C4H10).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>iso pentane (C5H12)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_isopentane(C5H12).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>krypton (Kr)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_krypton(Kr).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>methane (CH4)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_methane(CH4).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>methanol (CH3OH)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_methanol(CH3OH).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>neon (Ne)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_neon(Ne).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitric acid (HNO3)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitricacid(HNO3).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitric oxide (NO)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitricoxide(NO).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitrogen (N2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitrogen(N2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitrogen dioxide (NO2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitrogendioxide(NO2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitrous oxide (N2O)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitrousoxide(N2O).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nonane (C9H20)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nonane(C9H20).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>octane (C8H18)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_octane(C8H18).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>oxygen (O2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_oxygen(O2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>pentane (C5H12)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_pentane(C5H12).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>propane (C3H8)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_propane(C3H8).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>sulfur hexafluoride (SF6)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_sulfurhexafluoride(SF6).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>sulfuric acid (H2SO4)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_sulfuricacid(H2SO4).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>sulfur trioxide (SO3)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_sulfurtrioxide(SO3).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>water vapor (H2O)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_watervapor(H2O).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>xenon (Xe)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_xenon(Xe).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>33</SUB_ID>
+        <TITLE>properties definition</TITLE>
+        <VARNAME>eosType</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>2</DEF_VALUE>
+        <VALUE>2</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>6</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>perfect</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>semi perfect</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Van der Waals</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Redlich - Kwong</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Redlich - Kwong - Soave</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Peng - Robinson</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>21</SUB_ID>
+        <TITLE>setting properties through</TITLE>
+        <VARNAME>gasSetting</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1)</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>6</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>gamma + r</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>Cp + Cv</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>gamma + Cp</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>gamma + Cv</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>r + Cp</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>r + Cv</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+      </IPARAMS_LIST>
+      <TPARAMS_LIST>
+       <TPARAM>
+        <SUB_ID>27</SUB_ID>
+        <TITLE>filename for equation of state coefficients</TITLE>
+        <CUSTOM_TITLE>filename for equation of state coefficients</CUSTOM_TITLE>
+        <VARNAME>eosFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=3)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_eos.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_eos.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>28</SUB_ID>
+        <TITLE>filename for Cp, h and s coefficients</TITLE>
+        <CUSTOM_TITLE>filename for Cp, h and s coefficients</CUSTOM_TITLE>
+        <VARNAME>cphsFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=2)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_cp_h_s.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_cp_h_s.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>29</SUB_ID>
+        <TITLE>filename for mu coefficients</TITLE>
+        <CUSTOM_TITLE>filename for mu coefficients</CUSTOM_TITLE>
+        <VARNAME>muFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=2)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_mu.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_mu.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>30</SUB_ID>
+        <TITLE>filename for lambda coefficients</TITLE>
+        <CUSTOM_TITLE>filename for lambda coefficients</CUSTOM_TITLE>
+        <VARNAME>lambdaFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=2)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_lambda.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_lambda.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>4</SUB_ID>
+        <TITLE>name of the gas</TITLE>
+        <CUSTOM_TITLE>name of the gas</CUSTOM_TITLE>
+        <VARNAME>gasName</VARNAME>
+        <VISIBILITY>fluidType==1</VISIBILITY>
+        <DEF_VALUE>predefined carbon dioxide (CO2)</DEF_VALUE>
+        <VALUE>predefined carbon dioxide (CO2)</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>39</SUB_ID>
+        <TITLE>GMdataGases</TITLE>
+        <CUSTOM_TITLE>GMdataGases</CUSTOM_TITLE>
+        <VARNAME>GMdataGases</VARNAME>
+        <VISIBILITY>False</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/</DEF_VALUE>
+        <VALUE>$AME/libgm/data/</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>3</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>40</SUB_ID>
+        <TITLE>GMdataGasesNASA</TITLE>
+        <CUSTOM_TITLE>GMdataGasesNASA</CUSTOM_TITLE>
+        <VARNAME>GMdataGasesNASA</VARNAME>
+        <VISIBILITY>False</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>3</TEXT_TYPE>
+       </TPARAM>
+      </TPARAMS_LIST>
+      <PARAMS_GROUPS_LIST>
+       <PARAMS_GROUP>
+        <ORIG_TITLE>ROOTGROUP</ORIG_TITLE>
+        <CUSTOM_TITLE>ROOTGROUP</CUSTOM_TITLE>
+        <NAME>ROOTGROUP</NAME>
+        <SUB_ID>41</SUB_ID>
+        <CIRCUIT_SCOPE_ID>6786</CIRCUIT_SCOPE_ID>
+        <EDITABLE_TITLE>1</EDITABLE_TITLE>
+        <GROUP_HEAD_ICON></GROUP_HEAD_ICON>
+        <PARAM_GROUP_ELEMENT_LIST>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gi</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>fluidType</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>eosType</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gasSetting</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>cp</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>cv</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gamma</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>rGas</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>mu</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>lam</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>M</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>operatingTempK</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>enthForm</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>eosFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>cphsFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>muFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>lambdaFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gasName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>GMdataGases</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>GMdataGasesNASA</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+        </PARAM_GROUP_ELEMENT_LIST>
+        <EDITABLE>0</EDITABLE>
+       </PARAMS_GROUP>
+      </PARAMS_GROUPS_LIST>
+      <ICON_MAP>
+       <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+       <ICON_MAP_DATA>
+        $AME/libgm/Icons/layers/GMGD00_frame.svg
+       </ICON_MAP_DATA>
+      </ICON_MAP>
+      <CIR_PORTS_OVER_FRAMEWORK>0</CIR_PORTS_OVER_FRAMEWORK>
+      <SUBIDS_RESET>0</SUBIDS_RESET>
+     </SUBMODEL>
+    </COMP>
+    <COMP>
+     <COMP_TYPE>0</COMP_TYPE>
+     <ALIAS>gm_gas_data_3</ALIAS>
+     <COMP_NAME>gm_gas_data</COMP_NAME>
+     <COMP_DISPLAYNAME>gm_gas_data</COMP_DISPLAYNAME>
+     <COMP_ICON_DESCRIPTION>gas mixture gas data</COMP_ICON_DESCRIPTION>
+     <COMP_LIBRARY_ID>gasmixture.gm_gas_data</COMP_LIBRARY_ID>
+     <COMP_POS>87 218</COMP_POS>
+     <COMP_DEPTH>205</COMP_DEPTH>
+     <CIR_COMP_ICON>
+      <CIR_ICON_IDENTITY>1</CIR_ICON_IDENTITY>
+      <ICON_MAP>
+       <ICON_MAP_FORMAT>svgz/base64</ICON_MAP_FORMAT>
+       <ICON_MAP_DATA>
+        H4sIAAAAAAACCpVSPU/DMBDd+ytO1yEwNB+tEE0VpwIhWBgYYEYmddJTnTiyrSTl13NJPyYGsCz7fH733jvL2XaoNXTKOjKNCJIwDkA1hdlRU4ng4/15sQ62+SxzXQWMbJzAvfftJor6vg/7VWhsFS3jOI4YgSfIZtDUHH4DJmmaRtMtXjUxCZcIX9KpN2tK0kqgp+aIQDuBr9Qprc1nwtQC43ZAOJ73nnZ+L3CVjoe9omrvL6eOVP9oxgKIYZXyRDCsV2rTC3SFNVpPXjeulQULtlY5ZTuF3GmVzwAgK8gWWgEb0gLn5TQQnLfmwAXzeBqXxOJsZnlN1OSV1cQbN8i4gt0kaXjH0fESWQ7WHEQnRa8GD97KxpXG1gJr6S0NNwmMXSTAJZDc3yKUpvGLUtakmSl4sCR1cM46+lajHj9C/iJdFo2cf2JnH7D8B/uT9PJCn0XVuPAHyH8AHV0FmE8CAAA=
+       </ICON_MAP_DATA>
+      </ICON_MAP>
+      <CIR_PORT_GRAPHICS>
+       IDxQT1JUUy8+Cg==
+      </CIR_PORT_GRAPHICS>
+      <CIR_PORT_HIDDEN>0</CIR_PORT_HIDDEN>
+     </CIR_COMP_ICON>
+     <COMP_SCALE_X>1.000000</COMP_SCALE_X>
+     <COMP_SCALE_Y>1.000000</COMP_SCALE_Y>
+     <COMP_GEOMETRY>1</COMP_GEOMETRY>
+     <LABEL_POS>0 0 0 0</LABEL_POS>
+     <LABEL_VISIBLE>0</LABEL_VISIBLE>
+     <CIRCUIT_SCOPE_ID>5</CIRCUIT_SCOPE_ID>
+     <SUBMODEL>
+      <CODE_GEN_VERSION>1.0</CODE_GEN_VERSION>
+      <SUB_TYPE>2</SUB_TYPE>
+      <SUB_NAME>GMGD00</SUB_NAME>
+      <SUB_DIR>$AME/libgm/submodels</SUB_DIR>
+      <SUB_ID_MAX>41</SUB_ID_MAX>
+      <CUSTOM_NAME>GMGD_WATERVAPOR</CUSTOM_NAME>
+      <CUSTOM_DIR>$AME/libgm/submodels</CUSTOM_DIR>
+      <AUTONOMOUS_COMPILATION>False</AUTONOMOUS_COMPILATION>
+      <AUTONOMOUS_RUNTIME>False</AUTONOMOUS_RUNTIME>
+      <SUB_LABEL>gas definition for water vapor (H2O)</SUB_LABEL>
+      <SUB_UNIT>0</SUB_UNIT>
+      <I_STORES_NUMBER>1</I_STORES_NUMBER>
+      <HAS_PREINIT>1</HAS_PREINIT>
+      <OUTPUT_TYPE>1</OUTPUT_TYPE>
+      <RPARAMS_LIST>
+       <RPARAM>
+        <SUB_ID>13</SUB_ID>
+        <TITLE>constant-pressure specific heat (Cp)</TITLE>
+        <CUSTOM_TITLE>constant-pressure specific heat (Cp)</CUSTOM_TITLE>
+        <VARNAME>cp</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==2)||(gasSetting==3)||(gasSetting==5))</VISIBILITY>
+        <DEF_VALUE>1.00520000000000e+03</DEF_VALUE>
+        <VALUE>1.00520000000000e+03</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+05</MAX_VALUE>
+        <UNITS>J/kg/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>14</SUB_ID>
+        <TITLE>constant-volume specific heat (Cv)</TITLE>
+        <CUSTOM_TITLE>constant-volume specific heat (Cv)</CUSTOM_TITLE>
+        <VARNAME>cv</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==2)||(gasSetting==4)||(gasSetting==6))</VISIBILITY>
+        <DEF_VALUE>7.18000000000000e+02</DEF_VALUE>
+        <VALUE>7.18000000000000e+02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+05</MAX_VALUE>
+        <UNITS>J/kg/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>15</SUB_ID>
+        <TITLE>specific heat ratio (gamma)</TITLE>
+        <CUSTOM_TITLE>specific heat ratio (gamma)</CUSTOM_TITLE>
+        <VARNAME>gamma</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==1)||(gasSetting==3)||(gasSetting==4))</VISIBILITY>
+        <DEF_VALUE>1.40000000000000e+00</DEF_VALUE>
+        <VALUE>1.40000000000000e+00</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+01</MAX_VALUE>
+        <UNITS>null</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>16</SUB_ID>
+        <TITLE>specific gas constant (r)</TITLE>
+        <CUSTOM_TITLE>specific gas constant (r)</CUSTOM_TITLE>
+        <VARNAME>rGas</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1) &&((gasSetting==1)||(gasSetting==5)||(gasSetting==6))</VISIBILITY>
+        <DEF_VALUE>2.87200000000000e+02</DEF_VALUE>
+        <VALUE>2.87200000000000e+02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+04</MAX_VALUE>
+        <UNITS>J/kg/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>17</SUB_ID>
+        <TITLE>absolute viscosity (mu)</TITLE>
+        <CUSTOM_TITLE>absolute viscosity (mu)</CUSTOM_TITLE>
+        <VARNAME>mu</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1)</VISIBILITY>
+        <DEF_VALUE>1.82000000000000e-02</DEF_VALUE>
+        <VALUE>1.82000000000000e-02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+03</MAX_VALUE>
+        <UNITS>cP</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>18</SUB_ID>
+        <TITLE>thermal conductivity</TITLE>
+        <CUSTOM_TITLE>thermal conductivity</CUSTOM_TITLE>
+        <VARNAME>lam</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1)</VISIBILITY>
+        <DEF_VALUE>2.64000000000000e-02</DEF_VALUE>
+        <VALUE>2.64000000000000e-02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+06</MAX_VALUE>
+        <UNITS>W/m/K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>32</SUB_ID>
+        <TITLE>molar mass</TITLE>
+        <CUSTOM_TITLE>molar mass</CUSTOM_TITLE>
+        <VARNAME>M</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==2)</VISIBILITY>
+        <DEF_VALUE>2.89651300000000e+01</DEF_VALUE>
+        <VALUE>2.89651300000000e+01</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+30</MAX_VALUE>
+        <UNITS>g/mol</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>36</SUB_ID>
+        <TITLE>operating temperature</TITLE>
+        <CUSTOM_TITLE>operating temperature</CUSTOM_TITLE>
+        <VARNAME>operatingTempK</VARNAME>
+        <VISIBILITY>!(fluidType==1) && (eosType==1)</VISIBILITY>
+        <DEF_VALUE>3.73200000000000e+02</DEF_VALUE>
+        <VALUE>3.73200000000000e+02</VALUE>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+30</MAX_VALUE>
+        <UNITS>K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>38</SUB_ID>
+        <TITLE>enthalpy of formation</TITLE>
+        <CUSTOM_TITLE>enthalpy of formation</CUSTOM_TITLE>
+        <VARNAME>enthForm</VARNAME>
+        <VISIBILITY>(fluidType==1) &&( (eosType==1)||(eosType==2))</VISIBILITY>
+        <DEF_VALUE>-1.25530000000000e+02</DEF_VALUE>
+        <VALUE>-1.25530000000000e+02</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>-1.00000000000000e+30</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+30</MAX_VALUE>
+        <UNITS>J/mol</UNITS>
+       </RPARAM>
+      </RPARAMS_LIST>
+      <IPARAMS_LIST>
+       <IPARAM>
+        <SUB_ID>1</SUB_ID>
+        <TITLE>gas type index</TITLE>
+        <VARNAME>gi</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>4</DEF_VALUE>
+        <VALUE>4</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>6</SUB_ID>
+        <TITLE>fluid definition</TITLE>
+        <VARNAME>fluidType</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>36</DEF_VALUE>
+        <VALUE>36</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>37</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>user defined</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_userdefined.svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>air</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_air.svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>exhaust, stoichio</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_exhaust,stoichio.svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>ammonia (NH3)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_ammonia(NH3).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>argon (Ar)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_argon(Ar).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>butane (C4H10)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_butane(C4H10).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>carbon dioxide (CO2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_carbondioxide(CO2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>carbon monoxide (CO)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_carbonmonoxide(CO).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>decane (C10H22)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_decane(C10H22).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>ethane (C2H6)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_ethane(C2H6).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>ethylene (C2H4)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_ethylene(C2H4).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>helium (He)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_helium(He).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>heptane (C7H16)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_heptane(C7H16).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>hexane (C6H14)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_hexane(C6H14).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>hydrogen (H2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_hydrogen(H2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>hydrogen sulfide (H2S)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_hydrogensulfide(H2S).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>iso butane (C4H10)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_isobutane(C4H10).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>iso pentane (C5H12)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_isopentane(C5H12).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>krypton (Kr)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_krypton(Kr).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>methane (CH4)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_methane(CH4).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>methanol (CH3OH)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_methanol(CH3OH).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>neon (Ne)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_neon(Ne).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitric acid (HNO3)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitricacid(HNO3).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitric oxide (NO)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitricoxide(NO).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitrogen (N2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitrogen(N2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitrogen dioxide (NO2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitrogendioxide(NO2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nitrous oxide (N2O)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nitrousoxide(N2O).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>nonane (C9H20)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_nonane(C9H20).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>octane (C8H18)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_octane(C8H18).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>oxygen (O2)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_oxygen(O2).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>pentane (C5H12)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_pentane(C5H12).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>propane (C3H8)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_propane(C3H8).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>sulfur hexafluoride (SF6)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_sulfurhexafluoride(SF6).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>sulfuric acid (H2SO4)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_sulfuricacid(H2SO4).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>sulfur trioxide (SO3)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_sulfurtrioxide(SO3).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>water vapor (H2O)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_watervapor(H2O).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>xenon (Xe)</ENUM_STRING>
+          <ICON_MAP>
+           <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+           <ICON_MAP_DATA>
+            $AME/libgm/Icons/layers/GMGD00_fluidType_xenon(Xe).svg
+           </ICON_MAP_DATA>
+          </ICON_MAP>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>33</SUB_ID>
+        <TITLE>properties definition</TITLE>
+        <VARNAME>eosType</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>2</DEF_VALUE>
+        <VALUE>2</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>6</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>perfect</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>semi perfect</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Van der Waals</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Redlich - Kwong</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Redlich - Kwong - Soave</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>real: Peng - Robinson</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>21</SUB_ID>
+        <TITLE>setting properties through</TITLE>
+        <VARNAME>gasSetting</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType==1)</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>6</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>gamma + r</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>Cp + Cv</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>gamma + Cp</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>gamma + Cv</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>r + Cp</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>r + Cv</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+      </IPARAMS_LIST>
+      <TPARAMS_LIST>
+       <TPARAM>
+        <SUB_ID>27</SUB_ID>
+        <TITLE>filename for equation of state coefficients</TITLE>
+        <CUSTOM_TITLE>filename for equation of state coefficients</CUSTOM_TITLE>
+        <VARNAME>eosFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=3)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_eos.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_eos.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>28</SUB_ID>
+        <TITLE>filename for Cp, h and s coefficients</TITLE>
+        <CUSTOM_TITLE>filename for Cp, h and s coefficients</CUSTOM_TITLE>
+        <VARNAME>cphsFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=2)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_cp_h_s.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_cp_h_s.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>29</SUB_ID>
+        <TITLE>filename for mu coefficients</TITLE>
+        <CUSTOM_TITLE>filename for mu coefficients</CUSTOM_TITLE>
+        <VARNAME>muFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=2)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_mu.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_mu.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>30</SUB_ID>
+        <TITLE>filename for lambda coefficients</TITLE>
+        <CUSTOM_TITLE>filename for lambda coefficients</CUSTOM_TITLE>
+        <VARNAME>lambdaFileName</VARNAME>
+        <VISIBILITY>(fluidType==1)&&(eosType>=2)</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties/air_lambda.data</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties/air_lambda.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>4</SUB_ID>
+        <TITLE>name of the gas</TITLE>
+        <CUSTOM_TITLE>name of the gas</CUSTOM_TITLE>
+        <VARNAME>gasName</VARNAME>
+        <VISIBILITY>fluidType==1</VISIBILITY>
+        <DEF_VALUE>predefined water vapor (H2O)</DEF_VALUE>
+        <VALUE>predefined water vapor (H2O)</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>39</SUB_ID>
+        <TITLE>GMdataGases</TITLE>
+        <CUSTOM_TITLE>GMdataGases</CUSTOM_TITLE>
+        <VARNAME>GMdataGases</VARNAME>
+        <VISIBILITY>False</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/</DEF_VALUE>
+        <VALUE>$AME/libgm/data/</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>3</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>40</SUB_ID>
+        <TITLE>GMdataGasesNASA</TITLE>
+        <CUSTOM_TITLE>GMdataGasesNASA</CUSTOM_TITLE>
+        <VARNAME>GMdataGasesNASA</VARNAME>
+        <VISIBILITY>False</VISIBILITY>
+        <DEF_VALUE>$AME/libgm/data/nasa_properties</DEF_VALUE>
+        <VALUE>$AME/libgm/data/nasa_properties</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>3</TEXT_TYPE>
+       </TPARAM>
+      </TPARAMS_LIST>
+      <PARAMS_GROUPS_LIST>
+       <PARAMS_GROUP>
+        <ORIG_TITLE>ROOTGROUP</ORIG_TITLE>
+        <CUSTOM_TITLE>ROOTGROUP</CUSTOM_TITLE>
+        <NAME>ROOTGROUP</NAME>
+        <SUB_ID>41</SUB_ID>
+        <CIRCUIT_SCOPE_ID>7283</CIRCUIT_SCOPE_ID>
+        <EDITABLE_TITLE>1</EDITABLE_TITLE>
+        <GROUP_HEAD_ICON></GROUP_HEAD_ICON>
+        <PARAM_GROUP_ELEMENT_LIST>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gi</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>fluidType</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>eosType</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gasSetting</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>cp</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>cv</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gamma</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>rGas</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>mu</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>lam</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>M</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>operatingTempK</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>enthForm</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>eosFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>cphsFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>muFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>lambdaFileName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>gasName</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>GMdataGases</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>GMdataGasesNASA</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+        </PARAM_GROUP_ELEMENT_LIST>
+        <EDITABLE>0</EDITABLE>
+       </PARAMS_GROUP>
+      </PARAMS_GROUPS_LIST>
+      <ICON_MAP>
+       <ICON_MAP_FORMAT>path</ICON_MAP_FORMAT>
+       <ICON_MAP_DATA>
+        $AME/libgm/Icons/layers/GMGD00_frame.svg
+       </ICON_MAP_DATA>
+      </ICON_MAP>
+      <CIR_PORTS_OVER_FRAMEWORK>0</CIR_PORTS_OVER_FRAMEWORK>
+      <SUBIDS_RESET>0</SUBIDS_RESET>
+     </SUBMODEL>
+    </COMP>
+    <COMP>
+     <COMP_TYPE>0</COMP_TYPE>
+     <ALIAS>ma_fluid_data</ALIAS>
+     <COMP_NAME>ma_fluid_data</COMP_NAME>
+     <COMP_DISPLAYNAME>ma_fluid_data</COMP_DISPLAYNAME>
+     <COMP_ICON_DESCRIPTION>moist air fluid data</COMP_ICON_DESCRIPTION>
+     <COMP_LIBRARY_ID>moistair.ma_fluid_data</COMP_LIBRARY_ID>
+     <COMP_POS>178 124</COMP_POS>
+     <COMP_DEPTH>206</COMP_DEPTH>
+     <CIR_COMP_ICON>
+      <CIR_ICON_IDENTITY>1</CIR_ICON_IDENTITY>
+      <ICON_MAP>
+       <ICON_MAP_FORMAT>svgz/base64</ICON_MAP_FORMAT>
+       <ICON_MAP_DATA>
+        H4sIAAAAAAACCnVSy26DMBC85yss58AFjDGQhChOpFbqqZV6aM9V6jhgxcHIRpD067vmkVNrATsexjuzkneH21WjTlqnTM2DhNAAyVqYk6pLHnx+vESb4LBf7FxXIlDWjuOqbZttHPd9T/qUGFvGjFIagwKPku1Nq/rylzApiiIe/uKHJ04Iw+j76OS7NWelJcetqu8YqRPHr6qTWpuvBFpzTJsbRvep9urUVhynhd9UUpVVO+86Jfsn4w8gitICHowM+J216Tl2whqth6xb1xwFGDZWOmk7iWHScr9ACO2EskJLBIE0x8vzsDByrTUXOLCkw5qJaArDHsRVtdJqBQUGBJ2ANElBckD3GVkAGwDx6Dgae9Qc2wrB9G9sTZKQZaQQNMxIEqUkD9dkFcHrq/PAk9FEChrlJANpOksicMieGSObMFmTNBw6evvw0ftnCvD/1D48tEjH8CwnqzE8MFP2GMJPH7gH+19SyLKwVgIAAA==
+       </ICON_MAP_DATA>
+      </ICON_MAP>
+      <CIR_PORT_GRAPHICS>
+       IDxQT1JUUy8+Cg==
+      </CIR_PORT_GRAPHICS>
+      <CIR_PORT_HIDDEN>0</CIR_PORT_HIDDEN>
+     </CIR_COMP_ICON>
+     <COMP_SCALE_X>1.000000</COMP_SCALE_X>
+     <COMP_SCALE_Y>1.000000</COMP_SCALE_Y>
+     <COMP_GEOMETRY>1</COMP_GEOMETRY>
+     <LABEL_POS>0 0 0 0</LABEL_POS>
+     <LABEL_VISIBLE>0</LABEL_VISIBLE>
+     <CIRCUIT_SCOPE_ID>6</CIRCUIT_SCOPE_ID>
+     <SUBMODEL>
+      <CODE_GEN_VERSION>1.0</CODE_GEN_VERSION>
+      <SUB_TYPE>2</SUB_TYPE>
+      <SUB_NAME>MAFD001</SUB_NAME>
+      <SUB_DIR>$AME/libma/submodels</SUB_DIR>
+      <SUB_ID_MAX>17</SUB_ID_MAX>
+      <CUSTOM_NAME>MA_WATER</CUSTOM_NAME>
+      <CUSTOM_DIR>$AME/libma/submodels</CUSTOM_DIR>
+      <AUTONOMOUS_COMPILATION>False</AUTONOMOUS_COMPILATION>
+      <AUTONOMOUS_RUNTIME>False</AUTONOMOUS_RUNTIME>
+      <SUB_LABEL>thermal-hydraulic water (H20)</SUB_LABEL>
+      <SUB_UNIT>0</SUB_UNIT>
+      <R_STORES_NUMBER>4</R_STORES_NUMBER>
+      <I_STORES_NUMBER>4</I_STORES_NUMBER>
+      <HAS_PREINIT>1</HAS_PREINIT>
+      <OUTPUT_TYPE>1</OUTPUT_TYPE>
+      <RPARAMS_LIST>
+       <RPARAM>
+        <SUB_ID>1</SUB_ID>
+        <TITLE>initial temperature</TITLE>
+        <CUSTOM_TITLE>initial temperature</CUSTOM_TITLE>
+        <VARNAME>top</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>2.00000000000000e+01</DEF_VALUE>
+        <VALUE>2.00000000000000e+01</VALUE>
+        <MIN_VALUE>-2.73140000000000e+02</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+05</MAX_VALUE>
+        <UNITS>degC</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>2</SUB_ID>
+        <TITLE>air/gas content</TITLE>
+        <CUSTOM_TITLE>air/gas content</CUSTOM_TITLE>
+        <VARNAME>xair</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>1.00000000000000e-01</DEF_VALUE>
+        <VALUE>1.00000000000000e-01</VALUE>
+        <MIN_VALUE>1.00000000000000e-01</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e-01</MAX_VALUE>
+        <UNITS>%</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>3</SUB_ID>
+        <TITLE>polytropic index for air/gas/vapor content</TITLE>
+        <CUSTOM_TITLE>polytropic index for air/gas/vapor content</CUSTOM_TITLE>
+        <VARNAME>gamma</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>1.40000000000000e+00</DEF_VALUE>
+        <VALUE>1.40000000000000e+00</VALUE>
+        <MIN_VALUE>1.40000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.40000000000000e+00</MAX_VALUE>
+        <UNITS>null</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>4</SUB_ID>
+        <TITLE>absolute viscosity of air/gas</TITLE>
+        <CUSTOM_TITLE>absolute viscosity of air/gas</CUSTOM_TITLE>
+        <VARNAME>muair</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>2.00000000000000e-02</DEF_VALUE>
+        <VALUE>2.00000000000000e-02</VALUE>
+        <MIN_VALUE>2.00000000000000e-02</MIN_VALUE>
+        <MAX_VALUE>2.00000000000000e-02</MAX_VALUE>
+        <UNITS>cP</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>5</SUB_ID>
+        <TITLE>high saturated vapor pressure (cavitation)</TITLE>
+        <CUSTOM_TITLE>high saturated vapor pressure (cavitation)</CUSTOM_TITLE>
+        <VARNAME>pvaph</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>5.00000000000000e-01</DEF_VALUE>
+        <VALUE>5.00000000000000e-01</VALUE>
+        <MIN_VALUE>5.00000000000000e-01</MIN_VALUE>
+        <MAX_VALUE>5.00000000000000e-01</MAX_VALUE>
+        <UNITS>barA</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>6</SUB_ID>
+        <TITLE>low saturated vapor pressure (cavitation)</TITLE>
+        <CUSTOM_TITLE>low saturated vapor pressure (cavitation)</CUSTOM_TITLE>
+        <VARNAME>pvapl</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>4.00000000000000e-01</DEF_VALUE>
+        <VALUE>4.00000000000000e-01</VALUE>
+        <MIN_VALUE>4.00000000000000e-01</MIN_VALUE>
+        <MAX_VALUE>4.00000000000000e-01</MAX_VALUE>
+        <UNITS>barA</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>7</SUB_ID>
+        <TITLE>absolute viscosity of vapor</TITLE>
+        <CUSTOM_TITLE>absolute viscosity of vapor</CUSTOM_TITLE>
+        <VARNAME>muvap</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>2.00000000000000e-02</DEF_VALUE>
+        <VALUE>2.00000000000000e-02</VALUE>
+        <MIN_VALUE>2.00000000000000e-02</MIN_VALUE>
+        <MAX_VALUE>2.00000000000000e-02</MAX_VALUE>
+        <UNITS>cP</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>8</SUB_ID>
+        <TITLE>effective molecular mass of vapor</TITLE>
+        <CUSTOM_TITLE>effective molecular mass of vapor</CUSTOM_TITLE>
+        <VARNAME>mvap</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>2.00000000000000e+02</DEF_VALUE>
+        <VALUE>2.00000000000000e+02</VALUE>
+        <MIN_VALUE>2.00000000000000e+02</MIN_VALUE>
+        <MAX_VALUE>2.00000000000000e+02</MAX_VALUE>
+        <UNITS>null</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>9</SUB_ID>
+        <TITLE>air/gas density at atmospheric pressure and 0 degC</TITLE>
+        <CUSTOM_TITLE>air/gas density at atmospheric pressure and 0 degC</CUSTOM_TITLE>
+        <VARNAME>rhoair</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>1.20000000000000e+00</DEF_VALUE>
+        <VALUE>1.20000000000000e+00</VALUE>
+        <MIN_VALUE>1.20000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.20000000000000e+00</MAX_VALUE>
+        <UNITS>kg/m**3</UNITS>
+       </RPARAM>
+      </RPARAMS_LIST>
+      <IPARAMS_LIST>
+       <IPARAM>
+        <SUB_ID>10</SUB_ID>
+        <TITLE>thermal-hydraulic fluid index</TITLE>
+        <ORIG_TITLE>index of thermal-hydraulic fluid</ORIG_TITLE>
+        <VARNAME>fi</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>11</SUB_ID>
+        <TITLE>cavitation / aeration model: 0 inactive, 1 active</TITLE>
+        <VARNAME>cavmode</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>0</DEF_VALUE>
+        <VALUE>0</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>0</MAX_VALUE>
+       </IPARAM>
+      </IPARAMS_LIST>
+      <TPARAMS_LIST>
+       <TPARAM>
+        <SUB_ID>12</SUB_ID>
+        <TITLE>name of the fluid</TITLE>
+        <CUSTOM_TITLE>name of the fluid</CUSTOM_TITLE>
+        <VARNAME>fluidName</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>water</DEF_VALUE>
+        <VALUE>water</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>13</SUB_ID>
+        <TITLE>filename for fluid characteristic data</TITLE>
+        <CUSTOM_TITLE>filename for fluid characteristic data</CUSTOM_TITLE>
+        <VARNAME>dataFilename</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>$AME/libma/data/water.data</DEF_VALUE>
+        <VALUE>$AME/libma/data/water.data</VALUE>
+        <HIDDEN>2</HIDDEN>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+      </TPARAMS_LIST>
+      <IVARS_LIST>
+       <IVAR>
+        <SUB_ID>16</SUB_ID>
+        <TITLE>volume of fluid</TITLE>
+        <CUSTOM_TITLE>volume of fluid</CUSTOM_TITLE>
+        <VARNAME>volume</VARNAME>
+        <VISIBILITY>False</VISIBILITY>
+        <TYPE>0</TYPE>
+        <SAVE_VALUE>1</SAVE_VALUE>
+        <DIMENSION>1</DIMENSION>
+        <HIDDEN>2</HIDDEN>
+        <UNITS>L</UNITS>
+        <LASTATUS>
+         0
+        </LASTATUS>
+        <ORDER>
+         0
+        </ORDER>
+        <RATIO>
+              1.00000000000000e+00
+        </RATIO>
+        <IRC_RATIO>
+              1.00000000000000e+00
+        </IRC_RATIO>
+       </IVAR>
+       <IVAR>
+        <SUB_ID>17</SUB_ID>
+        <TITLE>mass of fluid</TITLE>
+        <CUSTOM_TITLE>mass of fluid</CUSTOM_TITLE>
+        <VARNAME>mass</VARNAME>
+        <VISIBILITY>False</VISIBILITY>
+        <TYPE>0</TYPE>
+        <SAVE_VALUE>1</SAVE_VALUE>
+        <DIMENSION>1</DIMENSION>
+        <HIDDEN>2</HIDDEN>
+        <UNITS>kg</UNITS>
+        <LASTATUS>
+         0
+        </LASTATUS>
+        <ORDER>
+         0
+        </ORDER>
+        <RATIO>
+              1.00000000000000e+00
+        </RATIO>
+        <IRC_RATIO>
+              1.00000000000000e+00
+        </IRC_RATIO>
+       </IVAR>
+      </IVARS_LIST>
+      <CIR_PORTS_OVER_FRAMEWORK>0</CIR_PORTS_OVER_FRAMEWORK>
+      <SUBIDS_RESET>0</SUBIDS_RESET>
+     </SUBMODEL>
+    </COMP>
+    <COMP>
+     <COMP_TYPE>0</COMP_TYPE>
+     <ALIAS>ma_condensate_definition</ALIAS>
+     <COMP_NAME>ma_condensate_definition</COMP_NAME>
+     <COMP_DISPLAYNAME>ma_condensate_definition</COMP_DISPLAYNAME>
+     <COMP_ICON_DESCRIPTION>moist air condensate definition</COMP_ICON_DESCRIPTION>
+     <COMP_LIBRARY_ID>moistair.ma_condensate_definition</COMP_LIBRARY_ID>
+     <COMP_POS>178 172</COMP_POS>
+     <COMP_DEPTH>207</COMP_DEPTH>
+     <CIR_COMP_ICON>
+      <CIR_ICON_IDENTITY>1</CIR_ICON_IDENTITY>
+      <ICON_MAP>
+       <ICON_MAP_FORMAT>svgz/base64</ICON_MAP_FORMAT>
+       <ICON_MAP_DATA>
+        H4sIAAAAAAACCr2VTY+bMBCG7/srLO8hFzC2gYCjkJVaqaetVKnbc5USB6z1YgQIkv76jgFHarvhUhWUZMbm9Tzzgcj+6fKmUS+bVpkq2zBCN0hWuTmpqsg2314++enm6fCwb/sCgbJqM1x2Xb0LgmEYyBAS0xQBp5QGoMCTZHfRqnp9T8iEEMF4F9+YmBGO0Y9jK7805qy0zHCnqitG6pThZ9VLrc13BqEzTOsLRtfZDurUlRkOhV2UUhVl51a9ksMHYw8gikIBH4wM8M7aDBlu88ZoPea6a+tjDsC6ka1seomh0uLwgBDa56rJtUSQkM7w43m8MGq7xrzCgUc6Xm7Dn5Pht4031clGKzBQIOhyyIYJEoN3dV4DTgpO8A9EagMtMVPHjB3yv/L41vHEOrx43fqS2wjTdeqjDrcCjLnakjVgzLVynU4y7njTM/oOcGx4RNK5CyERo4yC/VsoSDSHE2S7oGMxYbOQW+++MLVxRjJbjJjcyNGiTtj871VSH7sSwRv2c0g9DhPIqceI8IHshST24WvtVx56ISWRB3ZS+dBGj7v7Pux95KnHYQVxtt4c7efyKMdGJ67RcGB+ukn4W3rTqcpU8v70/xy1LSm1yUUkeg6hcC+Zit4Hhf2Bv6nDL93pbPH1BgAA
+       </ICON_MAP_DATA>
+      </ICON_MAP>
+      <CIR_PORT_GRAPHICS>
+       IDxQT1JUUy8+Cg==
+      </CIR_PORT_GRAPHICS>
+      <CIR_PORT_HIDDEN>0</CIR_PORT_HIDDEN>
+     </CIR_COMP_ICON>
+     <COMP_SCALE_X>1.000000</COMP_SCALE_X>
+     <COMP_SCALE_Y>1.000000</COMP_SCALE_Y>
+     <COMP_GEOMETRY>1</COMP_GEOMETRY>
+     <LABEL_POS>0 0 0 0</LABEL_POS>
+     <LABEL_VISIBLE>0</LABEL_VISIBLE>
+     <CIRCUIT_SCOPE_ID>7</CIRCUIT_SCOPE_ID>
+     <SUBMODEL>
+      <CODE_GEN_VERSION>1.0</CODE_GEN_VERSION>
+      <SUB_TYPE>0</SUB_TYPE>
+      <SUB_NAME>MACD010</SUB_NAME>
+      <SUB_DIR>$AME/libma/submodels</SUB_DIR>
+      <SUB_ID_MAX>18</SUB_ID_MAX>
+      <AUTONOMOUS_COMPILATION>False</AUTONOMOUS_COMPILATION>
+      <AUTONOMOUS_RUNTIME>False</AUTONOMOUS_RUNTIME>
+      <SUB_LABEL>moist air condensate definition</SUB_LABEL>
+      <SUB_UNIT>0</SUB_UNIT>
+      <I_STORES_NUMBER>1</I_STORES_NUMBER>
+      <HAS_PREINIT>1</HAS_PREINIT>
+      <OUTPUT_TYPE>1</OUTPUT_TYPE>
+      <RPARAMS_LIST>
+       <RPARAM>
+        <SUB_ID>17</SUB_ID>
+        <TITLE>reference temperature</TITLE>
+        <VARNAME>tref</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>3.73150000000000e+02</DEF_VALUE>
+        <VALUE>3.73150000000000e+02</VALUE>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+04</MAX_VALUE>
+        <UNITS>K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>11</SUB_ID>
+        <TITLE>vaporization latent heat at reference temperature</TITLE>
+        <VARNAME>lathref</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>2.19300000000000e+06</DEF_VALUE>
+        <VALUE>2.19300000000000e+06</VALUE>
+        <MIN_VALUE>-1.00000000000000e+12</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+12</MAX_VALUE>
+        <UNITS>J/kg</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>15</SUB_ID>
+        <TITLE>minimum temperature for saturation curve validity</TITLE>
+        <VARNAME>tmin</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>2.73150000000000e+02</DEF_VALUE>
+        <VALUE>2.73150000000000e+02</VALUE>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+04</MAX_VALUE>
+        <UNITS>K</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>16</SUB_ID>
+        <TITLE>maximum temperature for saturation curve validity</TITLE>
+        <VARNAME>tmax</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>6.47130000000000e+02</DEF_VALUE>
+        <VALUE>6.47130000000000e+02</VALUE>
+        <MIN_VALUE>0.00000000000000e+00</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+04</MAX_VALUE>
+        <UNITS>K</UNITS>
+       </RPARAM>
+      </RPARAMS_LIST>
+      <IPARAMS_LIST>
+       <IPARAM>
+        <SUB_ID>1</SUB_ID>
+        <TITLE>gas type index</TITLE>
+        <VARNAME>gi</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>4</DEF_VALUE>
+        <VALUE>4</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>7</SUB_ID>
+        <TITLE>thermal-hydraulic fluid index</TITLE>
+        <VARNAME>fi</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <MIN_VALUE>0</MIN_VALUE>
+        <MAX_VALUE>100</MAX_VALUE>
+       </IPARAM>
+      </IPARAMS_LIST>
+      <TPARAMS_LIST>
+       <TPARAM>
+        <SUB_ID>5</SUB_ID>
+        <TITLE>filename or expression for saturation pressure[PaA] = f(T[K])</TITLE>
+        <VARNAME>satcurve</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>133.32*10^(29.8605-3.1522e3/T-7.3037*log10(T)+2.4247e-9*T+1.809e-6*T*T)</DEF_VALUE>
+        <VALUE>133.32*10^(29.8605-3.1522e3/T-7.3037*log10(T)+2.4247e-9*T+1.809e-6*T*T)</VALUE>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+       <TPARAM>
+        <SUB_ID>18</SUB_ID>
+        <TITLE>condensate name</TITLE>
+        <VARNAME>condname</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>water</DEF_VALUE>
+        <VALUE>water</VALUE>
+        <TEXT_TYPE>0</TEXT_TYPE>
+       </TPARAM>
+      </TPARAMS_LIST>
+      <CIR_PORTS_OVER_FRAMEWORK>0</CIR_PORTS_OVER_FRAMEWORK>
+      <SUBIDS_RESET>0</SUBIDS_RESET>
+     </SUBMODEL>
+    </COMP>
+   </COMPS_LIST>
+   <TEXTS_LIST>
+    <TEXT>
+     <TEXT_POS>128 227</TEXT_POS>
+     <TEXT_ORIENTATION>0</TEXT_ORIENTATION>
+     <HTML>
+      &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+      &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+      p, li { white-space: pre-wrap; }
+      hr { height: 1px; border-width: 0; }
+      li.unchecked::marker { content: &quot;\2610&quot;; }
+      li.checked::marker { content: &quot;\2612&quot;; }
+      &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+      &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; color:#000000;&quot;&gt;4: H2O (g)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+     </HTML>
+    </TEXT>
+    <TEXT>
+     <TEXT_POS>128 133</TEXT_POS>
+     <TEXT_ORIENTATION>0</TEXT_ORIENTATION>
+     <HTML>
+      &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+      &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+      p, li { white-space: pre-wrap; }
+      hr { height: 1px; border-width: 0; }
+      li.unchecked::marker { content: &quot;\2610&quot;; }
+      li.checked::marker { content: &quot;\2612&quot;; }
+      &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+      &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; color:#000000;&quot;&gt;2: O2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+     </HTML>
+    </TEXT>
+    <TEXT>
+     <TEXT_POS>129 83</TEXT_POS>
+     <TEXT_ORIENTATION>0</TEXT_ORIENTATION>
+     <HTML>
+      &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+      &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+      p, li { white-space: pre-wrap; }
+      hr { height: 1px; border-width: 0; }
+      li.unchecked::marker { content: &quot;\2610&quot;; }
+      li.checked::marker { content: &quot;\2612&quot;; }
+      &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+      &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; color:#000000;&quot;&gt;1: N2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+     </HTML>
+    </TEXT>
+    <TEXT>
+     <TEXT_POS>128 181</TEXT_POS>
+     <TEXT_ORIENTATION>0</TEXT_ORIENTATION>
+     <HTML>
+      &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+      &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+      p, li { white-space: pre-wrap; }
+      hr { height: 1px; border-width: 0; }
+      li.unchecked::marker { content: &quot;\2610&quot;; }
+      li.checked::marker { content: &quot;\2612&quot;; }
+      &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+      &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; color:#000000;&quot;&gt;3: CO2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+     </HTML>
+    </TEXT>
+    <TEXT>
+     <TEXT_POS>221 83</TEXT_POS>
+     <TEXT_ORIENTATION>0</TEXT_ORIENTATION>
+     <HTML>
+      &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+      &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+      p, li { white-space: pre-wrap; }
+      hr { height: 1px; border-width: 0; }
+      li.unchecked::marker { content: &quot;\2610&quot;; }
+      li.checked::marker { content: &quot;\2612&quot;; }
+      &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+      &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; color:#000000;&quot;&gt;10: Mixture&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+     </HTML>
+    </TEXT>
+    <TEXT>
+     <TEXT_POS>221 133</TEXT_POS>
+     <TEXT_ORIENTATION>0</TEXT_ORIENTATION>
+     <HTML>
+      &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+      &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+      p, li { white-space: pre-wrap; }
+      hr { height: 1px; border-width: 0; }
+      li.unchecked::marker { content: &quot;\2610&quot;; }
+      li.checked::marker { content: &quot;\2612&quot;; }
+      &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+      &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; color:#000000;&quot;&gt;1: H2O (l)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+     </HTML>
+    </TEXT>
+    <TEXT>
+     <TEXT_POS>221 181</TEXT_POS>
+     <TEXT_ORIENTATION>0</TEXT_ORIENTATION>
+     <HTML>
+      &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+      &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+      p, li { white-space: pre-wrap; }
+      hr { height: 1px; border-width: 0; }
+      li.unchecked::marker { content: &quot;\2610&quot;; }
+      li.checked::marker { content: &quot;\2612&quot;; }
+      &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+      &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; color:#000000;&quot;&gt;Condensate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+     </HTML>
+    </TEXT>
+    <TEXT>
+     <TEXT_POS>67 267</TEXT_POS>
+     <TEXT_ORIENTATION>0</TEXT_ORIENTATION>
+     <HTML>
+      &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+      &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+      p, li { white-space: pre-wrap; }
+      hr { height: 1px; border-width: 0; }
+      li.unchecked::marker { content: &quot;\2610&quot;; }
+      li.checked::marker { content: &quot;\2612&quot;; }
+      &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+      &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600; color:#000000;&quot;&gt;GAS SPECIES DEFINITION&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+     </HTML>
+    </TEXT>
+   </TEXTS_LIST>
+   <SHAPES_LIST>
+    <SHAPE>
+     <SHAPE_TYPE>0</SHAPE_TYPE>
+     <SHAPE_LINE_STYLE>0</SHAPE_LINE_STYLE>
+     <SHAPE_LINE_WIDTH>1</SHAPE_LINE_WIDTH>
+     <SHAPE_DEPTH>201</SHAPE_DEPTH>
+     <SHAPE_CUR_DEPTH_TYPE>2</SHAPE_CUR_DEPTH_TYPE>
+     <SHAPE_CONT_COLOR>0 0 0</SHAPE_CONT_COLOR>
+     <SHAPE_TRANSPARENT>9.00000000000000e-01</SHAPE_TRANSPARENT>
+     <SHAPE_FILL_COLOR>170 0 0</SHAPE_FILL_COLOR>
+     <SHAPE_POINTS>
+      70,265 70,67 305,67 305,265
+     </SHAPE_POINTS>
+    </SHAPE>
+   </SHAPES_LIST>
+   <ANIMATION_PROPERTIES>
+    <SPEED>1.00000000000000e+00</SPEED>
+    <LOOP>0</LOOP>
+   </ANIMATION_PROPERTIES>
+   <GLOBAL_PARAMS_LIST>
+   </GLOBAL_PARAMS_LIST>
+  </CIRCUIT>
+ </SUPERCOMPONENT>
+</SUB>

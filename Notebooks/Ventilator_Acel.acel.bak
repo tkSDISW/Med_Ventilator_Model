@@ -1,0 +1,679 @@
+system amesim_model:
+    attributes:
+        float |barA| p_0 = 1.013 |barA| -> p_0
+        float |degC| T_0 = 20.0 |degC| -> T_0
+        float |L| V_0 = 3.2 |L| -> V_0
+        float |null| O2var_in = 0.2095 |null| -> O2in
+        float |null| O2_0 = "O2in" |null| -> O2_0
+        float |null| N2var_in = 0.7809 |null| -> N2in
+        float |null| N2_0 = "N2in" |null| -> N2_0
+        float |null| CO2var_in = 0.004 |null| -> CO2in
+        float |null| CO2_0 = "CO2in" |null| -> CO2_0
+        float |null| H2Ovar_in = 0.0 |null| -> H2Oin
+        float |null| H2O_0 = "H2Oin" |null| -> H2O_0
+        float |barA| pvar_in = 6.013 |barA| -> pin
+        float |degC| Tvar_in = 20.0 |degC| -> Tin
+        float |null| humidity = 80.0 |null| -> humidity
+        float |m| len_var_in = 1.0 |m| -> len_in
+        float |m| len_var_out = 1.0 |m| -> len_out
+        float |null| RRate = 10.0 |null| -> RRate
+    owns:
+        gm_def
+        gm_gas_data
+        gm_gas_data_1
+        gm_gas_data_2
+        gm_gas_data_3
+        ma_fluid_data
+        ma_condensate_definition
+        Room_Air
+        O2Inlet
+        Vent_to_Humid_Pipe
+        FeedValve
+        Patient
+        gm_node3_3
+        Insp_Pipe
+        Exp_Pipe
+        splitter2p
+        Controller
+        Humidifier
+        Ventilator
+        Expiration
+        VolSensor
+        O2Sensor
+    scenarios:
+        Simulation
+
+scenario::simulation Simulation:
+    info:
+        evaluationtool = "Amesim"
+        starttime = 0.0
+        endtime = 60.0
+        timestep = 0.01
+
+asset::Amesim gm_def:
+    attributes:
+        int gmi = 10 -> gmi
+        int mode = 1 -> mode
+        int nspec = 4 -> nspec
+        int gi1 = 1 -> gi1
+        int gi2 = 2 -> gi2
+        int gi3 = 3 -> gi3
+        int gi4 = 4 -> gi4
+        int gi5 = 5 -> gi5
+        int gi6 = 6 -> gi6
+        int gi7 = 7 -> gi7
+        int gi8 = 8 -> gi8
+        int gi9 = 9 -> gi9
+        int gi10 = 10 -> gi10
+        int gi11 = 11 -> gi11
+        int gi12 = 12 -> gi12
+        int gi13 = 13 -> gi13
+        int gi14 = 14 -> gi14
+        int gi15 = 15 -> gi15
+        int gi16 = 16 -> gi16
+        int gi17 = 17 -> gi17
+        int gi18 = 18 -> gi18
+        int gi19 = 19 -> gi19
+        int gi20 = 20 -> gi20
+        int handlvar_ingFog = 2 -> handlingFog
+        int condensateRank = 4 -> condensateRank
+        int handlvar_ingErrorWarnvar_ing = 1 -> handlingErrorWarning
+        string GMdataGases = "$AME/libgm/data/" -> GMdataGases
+        string GMdataGasesNASA = "$AME/libgm/data/nasa_properties" -> GMdataGasesNASA
+    componentinfo:
+        componentname = gm_def
+        submodel = GMGD0
+    properties:
+        multiplicity = 1
+
+asset::Amesim gm_gas_data:
+    attributes:
+        float |K| operatvar_ingTempK = 298.15 |K| -> operatingTempK
+        int gi = 1 -> gi
+        int eosType = 2 -> eosType
+    componentinfo:
+        componentname = gm_gas_data
+        submodel = GMGD_NITROGEN
+    properties:
+        multiplicity = 1
+
+asset::Amesim gm_gas_data_1:
+    attributes:
+        float |K| operatvar_ingTempK = 298.15 |K| -> operatingTempK
+        int gi = 2 -> gi
+        int eosType = 2 -> eosType
+    componentinfo:
+        componentname = gm_gas_data
+        submodel = GMGD_OXYGEN
+    properties:
+        multiplicity = 1
+
+asset::Amesim gm_gas_data_2:
+    attributes:
+        float |K| operatvar_ingTempK = 298.15 |K| -> operatingTempK
+        int gi = 3 -> gi
+        int eosType = 2 -> eosType
+    componentinfo:
+        componentname = gm_gas_data
+        submodel = GMGD_CARBONDIOXIDE
+    properties:
+        multiplicity = 1
+
+asset::Amesim gm_gas_data_3:
+    attributes:
+        float |K| operatvar_ingTempK = 373.2 |K| -> operatingTempK
+        int gi = 4 -> gi
+        int eosType = 2 -> eosType
+    componentinfo:
+        componentname = gm_gas_data
+        submodel = GMGD_WATERVAPOR
+    properties:
+        multiplicity = 1
+
+asset::Amesim ma_fluid_data:
+    attributes:
+        float |degC| @top = 20.0 |degC| -> @top
+        float |%| xair = 0.1 |%| -> xair
+        float |null| gamma = 1.4 |null| -> gamma
+        float |cP| muair = 0.02 |cP| -> muair
+        float |barA| pvaph = 0.5 |barA| -> pvaph
+        float |barA| pvapl = 0.4 |barA| -> pvapl
+        float |cP| muvap = 0.02 |cP| -> muvap
+        float |null| mvap = 200.0 |null| -> mvap
+        float |kg/m**3| rhoair = 1.2 |kg/m**3| -> rhoair
+        int fi = 1 -> fi
+        int cavmode = 0 -> cavmode
+    componentinfo:
+        componentname = ma_fluid_data
+        submodel = MA_WATER
+    properties:
+        multiplicity = 1
+
+asset::Amesim ma_condensate_definition:
+    attributes:
+        float |K| tref = 373.15 |K| -> tref
+        float |J/kg| lathref = 2193000.0 |J/kg| -> lathref
+        float |K| tmvar_in = 273.15 |K| -> tmin
+        float |K| tmax = 647.13 |K| -> tmax
+        int gi = 4 -> gi
+        int fi = 1 -> fi
+        string satcurve = "133.32*10^(29.8605-3.1522e3/T-7.3037*log10(T)+2.4247e-9*T+1.809e-6*T*T)" -> satcurve
+        string condname = "water" -> condname
+    componentinfo:
+        componentname = ma_condensate_definition
+        submodel = MACD010
+    properties:
+        multiplicity = 1
+
+asset::Amesim Room_Air:
+    attributes:
+        float |K| temp1 -> temp1
+        float |Pa| press1 -> press1
+        float |thpnull| cnum1 -> cnum1
+        float |null| xi1 = "N2in" |null| -> xi1
+        float |null| xi2 = "O2in" |null| -> xi2
+        float |null| xi3 = "CO2in" |null| -> xi3
+        float |null| xi4 = "H2Oin" |null| -> xi4
+        float |null| xi5 = 0.0 |null| -> xi5
+        float |null| xi6 = 0.0 |null| -> xi6
+        float |null| xi7 = 0.0 |null| -> xi7
+        float |null| xi8 = 0.0 |null| -> xi8
+        float |null| xi9 = 0.0 |null| -> xi9
+        float |null| xi10 = 0.0 |null| -> xi10
+        float |null| xi11 = 0.0 |null| -> xi11
+        float |null| xi12 = 0.0 |null| -> xi12
+        float |null| xi13 = 0.0 |null| -> xi13
+        float |null| xi14 = 0.0 |null| -> xi14
+        float |null| xi15 = 0.0 |null| -> xi15
+        float |null| xi16 = 0.0 |null| -> xi16
+        float |null| xi17 = 0.0 |null| -> xi17
+        float |null| xi18 = 0.0 |null| -> xi18
+        float |null| xi19 = 0.0 |null| -> xi19
+        float |null| xi20 = 0.0 |null| -> xi20
+        int gmi = 10 -> gmi
+        int imode = 1 -> imode
+        int nspec = 4 -> nspec
+    componentinfo:
+        componentname = gm_pressure_source
+        submodel = GMCS001
+    properties:
+        multiplicity = 1
+    ports::individual:
+        io::pflow port_1 -> 1
+    style:
+        port_1: position = right
+
+asset::Amesim O2Inlet:
+    attributes:
+        float |K| temp1 -> temp1
+        float |Pa| press1 -> press1
+        float |thpnull| cnum1 -> cnum1
+        float |null| xi1 = 0.0 |null| -> xi1
+        float |null| xi2 = 1.0 |null| -> xi2
+        float |null| xi3 = 0.0 |null| -> xi3
+        float |null| xi4 = 0.0 |null| -> xi4
+        float |null| xi5 = 0.0 |null| -> xi5
+        float |null| xi6 = 0.0 |null| -> xi6
+        float |null| xi7 = 0.0 |null| -> xi7
+        float |null| xi8 = 0.0 |null| -> xi8
+        float |null| xi9 = 0.0 |null| -> xi9
+        float |null| xi10 = 0.0 |null| -> xi10
+        float |null| xi11 = 0.0 |null| -> xi11
+        float |null| xi12 = 0.0 |null| -> xi12
+        float |null| xi13 = 0.0 |null| -> xi13
+        float |null| xi14 = 0.0 |null| -> xi14
+        float |null| xi15 = 0.0 |null| -> xi15
+        float |null| xi16 = 0.0 |null| -> xi16
+        float |null| xi17 = 0.0 |null| -> xi17
+        float |null| xi18 = 0.0 |null| -> xi18
+        float |null| xi19 = 0.0 |null| -> xi19
+        float |null| xi20 = 0.0 |null| -> xi20
+        int gmi = 10 -> gmi
+        int imode = 1 -> imode
+        int nspec = 4 -> nspec
+    componentinfo:
+        componentname = gm_pressure_source
+        submodel = GMCS001
+    properties:
+        multiplicity = 1
+    ports::individual:
+        io::pflow port_1 -> 1
+    style:
+        port_1: position = right
+
+asset::Amesim Vent_to_Humid_Pipe:
+    attributes:
+        float |J/s| dh1 -> dh1
+        float |g/s| dm1 -> dm1
+        float |thpnull| rnum1 -> rnum1
+        float |K| t1 -> t1
+        float |Pa| p1 -> p1
+        float |thpnull| cnum1 -> cnum1
+        float |J/s| dh2 -> dh2
+        float |g/s| dm2 -> dm2
+        float |thpnull| rnum2 -> rnum2
+        float |K| t2 -> t2
+        float |Pa| p2 -> p2
+        float |thpnull| cnum2 -> cnum2
+        float |null| re -> re
+        float |m/s| v -> v
+        float |null| ff -> ff
+        float |g/s| dmir -> dmir
+        float |mm| diam = 5.0 |mm| -> diam
+        float |mm| width = 100.0 |mm| -> width
+        float |mm| height = 100.0 |mm| -> height
+        float |mm| dhyd = 100.0 |mm| -> dhyd
+        float |mm| wetper = 300.0 |mm| -> wetper
+        float |m| le = 0.1 |m| -> le
+        float |null| rr = 1e-05 |null| -> rr
+        int gmi = 10 -> gmi
+        int pipetype = 1 -> pipetype
+        int areadef = 1 -> areadef
+    componentinfo:
+        componentname = gm_pipe
+        submodel = GMP010
+    properties:
+        multiplicity = 1
+    ports::individual:
+        io::pflow port_1 -> 1
+        io::pflow port_2 -> 2
+    style:
+        port_1: position = right
+
+asset::Amesim FeedValve:
+    attributes:
+        float |null| res -> res
+        float |J/s| dh2 -> dh2
+        float |g/s| dm2 -> dm2
+        float |thpnull| rnum2 -> rnum2
+        float |K| temp2 -> temp2
+        float |Pa| press2 -> press2
+        float |thpnull| cnum2 -> cnum2
+        float |J/s| dh3 -> dh3
+        float |g/s| dm3 -> dm3
+        float |thpnull| rnum3 -> rnum3
+        float |K| temp3 -> temp3
+        float |Pa| press3 -> press3
+        float |thpnull| cnum3 -> cnum3
+        float |null| xv -> xv
+        float |(kg*K/J)**(1/2)| cm -> cm
+        float |m/s| gasvel -> gasvel
+        float |null| cq = 0.72 |null| -> cq
+        float |mm**2| area0 = 25.0 |mm**2| -> area0
+        float |null| Cv = 0.5 |null| -> Cv
+        float |null| Kv = 0.4 |null| -> Kv
+        int gmi = 10 -> gmi
+        int flowset = 1 -> flowset
+    componentinfo:
+        componentname = gm_morifice
+        submodel = GMVO001
+    properties:
+        multiplicity = 1
+    ports::individual:
+        io::signal port_1 -> 1
+        io::pflow port_2 -> 2
+        io::pflow port_3 -> 3
+    style:
+        port_1: position = bottom
+        port_2: position = right
+
+asset::Amesim Patient:
+    attributes:
+        float |K| temp -> temp
+        float |Pa| press -> press
+        float |g/s| dm1 -> dm1
+        float |cm**3| vol -> vol
+        float |null| xi_1 -> xi_1
+        float |null| xi_2 -> xi_2
+        float |null| xi_3 -> xi_3
+        float |null| xi_4 -> xi_4
+        float |null| msig -> msig
+        float |mm| diam = 6.0 |mm| -> diam
+        float |m| le = 0.2 |m| -> le
+        float |null| rr = 1e-05 |null| -> rr
+        float |L| cvol0 = "V_0" |L| -> cvol0
+        float |N/m| srate = 0.5 |N/m| -> srate
+    componentinfo:
+        componentname = Patient
+        submodel = PATIENT
+    properties:
+        multiplicity = 1
+    ports::individual:
+        io::pflow port_1 -> 1
+    style:
+        port_1: position = top
+
+asset::Amesim gm_node3_3:
+    attributes:
+        float |J/s| dh1 -> dh1
+        float |g/s| dm1 -> dm1
+        float |thpnull| rnum1 -> rnum1
+        float |L/min| dvol1 -> dvol1
+        float |cm**3| vol1 -> vol1
+        float |K| temp1 -> temp1
+        float |Pa| press1 -> press1
+        float |thpnull| cnum1 -> cnum1
+        float |K| temp2 -> temp2
+        float |Pa| press2 -> press2
+        float |thpnull| cnum2 -> cnum2
+        float |J/s| dh2 -> dh2
+        float |g/s| dm2 -> dm2
+        float |thpnull| rnum2 -> rnum2
+        float |L/min| dvol2 -> dvol2
+        float |cm**3| vol2 -> vol2
+        float |K| temp3 -> temp3
+        float |Pa| press3 -> press3
+        float |thpnull| cnum3 -> cnum3
+        float |J/s| dh3 -> dh3
+        float |g/s| dm3 -> dm3
+        float |thpnull| rnum3 -> rnum3
+        float |L/min| dvol3 -> dvol3
+        float |cm**3| vol3 -> vol3
+        float |mol/s| dni_1 -> dni_1
+        float |mol/s| dni_2 -> dni_2
+        float |mol/s| dni_3 -> dni_3
+        float |mol/s| dni_4 -> dni_4
+        float |mol/s| dni_5 -> dni_5
+        float |mol/s| dni_6 -> dni_6
+        float |mol/s| dni_7 -> dni_7
+        float |mol/s| dni_8 -> dni_8
+        float |mol/s| dni_9 -> dni_9
+        float |mol/s| dni_10 -> dni_10
+        float |mol/s| dni_11 -> dni_11
+        float |mol/s| dni_12 -> dni_12
+        float |mol/s| dni_13 -> dni_13
+        float |mol/s| dni_14 -> dni_14
+        float |mol/s| dni_15 -> dni_15
+        float |mol/s| dni_16 -> dni_16
+        float |mol/s| dni_17 -> dni_17
+        float |mol/s| dni_18 -> dni_18
+        float |mol/s| dni_19 -> dni_19
+        float |mol/s| dni_20 -> dni_20
+    componentinfo:
+        componentname = gm_node3
+        submodel = GM3NODE01
+    properties:
+        multiplicity = 1
+    ports::individual:
+        io::pflow port_1 -> 1
+        io::pflow port_2 -> 2
+        io::pflow port_3 -> 3
+    style:
+        port_1: position = right
+        port_2: position = top
+
+asset::Amesim Insp_Pipe:
+    attributes:
+        float |J/s| dmh1 -> dmh1
+        float |g/s| dm1 -> dm1
+        float |thpnull| rnum1 -> rnum1
+        float |K| t1 -> t1
+        float |Pa| p1 -> p1
+        float |thpnull| cnum1 -> cnum1
+        float |K| t2 -> t2
+        float |Pa| p2 -> p2
+        float |thpnull| cnum2 -> cnum2
+        float |J/s| dmh2 -> dmh2
+        float |g/s| dm2 -> dm2
+        float |thpnull| rnum2 -> rnum2
+        float |null| re -> re
+        float |m/s| v -> v
+        float |null| ff -> ff
+        float |PaA| pressiA_1 -> pressiA_1
+        float |PaA| pressiA_2 -> pressiA_2
+        float |PaA| pressiA_3 -> pressiA_3
+        float |PaA| pressiA_4 -> pressiA_4
+        float |g| mgas -> mgas
+        float |null| xi_1 -> xi_1
+        float |null| xi_2 -> xi_2
+        float |null| xi_3 -> xi_3
+        float |null| xi_4 -> xi_4
+        float |mm| diam = 5.0 |mm| -> diam
+        float |mm| width = 100.0 |mm| -> width
+        float |mm| height = 100.0 |mm| -> height
+        float |mm| dhyd = 100.0 |mm| -> dhyd
+        float |mm| wetper = 300.0 |mm| -> wetper
+        float |m| le = "len_in" |m| -> le
+        float |null| rr = 1e-05 |null| -> rr
+        float |null| ixi0 = "N2_0" |null| -> ixi0
+        float |null| ixi1 = "O2_0" |null| -> ixi1
+        float |null| ixi2 = "CO2_0" |null| -> ixi2
+        float |null| ixi3 = "H2O_0" |null| -> ixi3
+        float |null| ixi4 = 0.0 |null| -> ixi4
+        float |null| ixi5 = 0.0 |null| -> ixi5
+        float |null| ixi6 = 0.0 |null| -> ixi6
+        float |null| ixi7 = 0.0 |null| -> ixi7
+        float |null| ixi8 = 0.0 |null| -> ixi8
+        float |null| ixi9 = 0.0 |null| -> ixi9
+        float |null| ixi10 = 0.0 |null| -> ixi10
+        float |null| ixi11 = 0.0 |null| -> ixi11
+        float |null| ixi12 = 0.0 |null| -> ixi12
+        float |null| ixi13 = 0.0 |null| -> ixi13
+        float |null| ixi14 = 0.0 |null| -> ixi14
+        float |null| ixi15 = 0.0 |null| -> ixi15
+        float |null| ixi16 = 0.0 |null| -> ixi16
+        float |null| ixi17 = 0.0 |null| -> ixi17
+        float |null| ixi18 = 0.0 |null| -> ixi18
+        float |null| ixi19 = 0.0 |null| -> ixi19
+        int gmi = 10 -> gmi
+        int areadef = 1 -> areadef
+        int nspec = 4 -> nspec
+        int imode = 2 -> imode
+    componentinfo:
+        componentname = gm_pipe
+        submodel = GMP011
+    properties:
+        multiplicity = 1
+    ports::individual:
+        io::pflow port_1 -> 1
+        io::pflow port_2 -> 2
+    style:
+        port_1: position = right
+
+asset::Amesim Exp_Pipe:
+    attributes:
+        float |J/s| dmh1 -> dmh1
+        float |g/s| dm1 -> dm1
+        float |thpnull| rnum1 -> rnum1
+        float |K| t1 -> t1
+        float |Pa| p1 -> p1
+        float |thpnull| cnum1 -> cnum1
+        float |K| t2 -> t2
+        float |Pa| p2 -> p2
+        float |thpnull| cnum2 -> cnum2
+        float |J/s| dmh2 -> dmh2
+        float |g/s| dm2 -> dm2
+        float |thpnull| rnum2 -> rnum2
+        float |null| re -> re
+        float |m/s| v -> v
+        float |null| ff -> ff
+        float |PaA| pressiA_1 -> pressiA_1
+        float |PaA| pressiA_2 -> pressiA_2
+        float |PaA| pressiA_3 -> pressiA_3
+        float |PaA| pressiA_4 -> pressiA_4
+        float |g| mgas -> mgas
+        float |null| xi_1 -> xi_1
+        float |null| xi_2 -> xi_2
+        float |null| xi_3 -> xi_3
+        float |null| xi_4 -> xi_4
+        float |mm| diam = 5.0 |mm| -> diam
+        float |mm| width = 100.0 |mm| -> width
+        float |mm| height = 100.0 |mm| -> height
+        float |mm| dhyd = 100.0 |mm| -> dhyd
+        float |mm| wetper = 300.0 |mm| -> wetper
+        float |m| le = "len_out" |m| -> le
+        float |null| rr = 1e-05 |null| -> rr
+        float |null| ixi0 = "N2_0" |null| -> ixi0
+        float |null| ixi1 = "O2_0" |null| -> ixi1
+        float |null| ixi2 = "CO2_0" |null| -> ixi2
+        float |null| ixi3 = "H2O_0" |null| -> ixi3
+        float |null| ixi4 = 0.0 |null| -> ixi4
+        float |null| ixi5 = 0.0 |null| -> ixi5
+        float |null| ixi6 = 0.0 |null| -> ixi6
+        float |null| ixi7 = 0.0 |null| -> ixi7
+        float |null| ixi8 = 0.0 |null| -> ixi8
+        float |null| ixi9 = 0.0 |null| -> ixi9
+        float |null| ixi10 = 0.0 |null| -> ixi10
+        float |null| ixi11 = 0.0 |null| -> ixi11
+        float |null| ixi12 = 0.0 |null| -> ixi12
+        float |null| ixi13 = 0.0 |null| -> ixi13
+        float |null| ixi14 = 0.0 |null| -> ixi14
+        float |null| ixi15 = 0.0 |null| -> ixi15
+        float |null| ixi16 = 0.0 |null| -> ixi16
+        float |null| ixi17 = 0.0 |null| -> ixi17
+        float |null| ixi18 = 0.0 |null| -> ixi18
+        float |null| ixi19 = 0.0 |null| -> ixi19
+        int gmi = 10 -> gmi
+        int areadef = 1 -> areadef
+        int nspec = 4 -> nspec
+        int imode = 2 -> imode
+    componentinfo:
+        componentname = gm_pipe
+        submodel = GMP011
+    properties:
+        multiplicity = 1
+    ports::individual:
+        io::pflow port_1 -> 1
+        io::pflow port_2 -> 2
+    style:
+        port_1: position = bottom
+        port_2: position = top
+
+asset::Amesim splitter2p:
+    attributes:
+        float |null| var_out1 -> out1
+        float |null| var_out2 -> out2
+        float |null| var_in3 -> in3
+    componentinfo:
+        componentname = splitter2p
+        submodel = SPLT0
+    properties:
+        multiplicity = 1
+    ports::individual:
+        io::signal port_1 -> 1
+        io::signal port_2 -> 2
+        io::signal port_3 -> 3
+    style:
+        port_1: position = bottom
+        port_2: position = top
+
+asset::Amesim Controller:
+    attributes:
+        float |null| PSet = 9000.0 |null| -> PSet
+        float |Hz| freq = "RRate/60" |Hz| -> freq
+        float |null| duty = 0.66 |null| -> duty
+    componentinfo:
+        componentname = Vent_Controller
+        submodel = VENTCONTROLLER
+    properties:
+        multiplicity = 1
+    ports::individual:
+        io::signal port_1 -> 1
+        io::signal port_2 -> 2
+        io::signal port_3 -> 3
+        io::signal port_4 -> 4
+    style:
+        port_1: position = bottom
+        port_2: position = bottom
+        port_3: position = bottom
+        port_4: position = right
+
+asset::Amesim Humidifier:
+    attributes:
+        float |null| Humid = "humidity" |null| -> Humid
+    componentinfo:
+        componentname = Vent_Humidifier
+        submodel = HUMIDIFIER
+    properties:
+        multiplicity = 1
+    ports::individual:
+        io::pflow port_1 -> 1
+        io::pflow port_2 -> 2
+    style:
+        port_1: position = right
+
+asset::Amesim Ventilator:
+    attributes:
+        float |rev/min| Comp_speed -> Comp_speed
+        float |null| AirMassFlow -> AirMassFlow
+        float |null| AirVolFlow -> AirVolFlow
+        float |null| O2MassFlow -> O2MassFlow
+        float |null| TotalMassFlow -> TotalMassFlow
+        float |null| O2_ValvePos = 0.0 |null| -> O2_ValvePos
+    componentinfo:
+        componentname = Ventilator
+        submodel = VENTILATOR
+    properties:
+        multiplicity = 1
+    ports::individual:
+        io::signal port_1 -> 1
+        io::pflow port_2 -> 2
+        io::pflow port_3 -> 3
+        io::pflow port_4 -> 4
+    style:
+        port_1: position = right
+        port_2: position = right
+
+asset::Amesim Expiration:
+    componentinfo:
+        componentname = Expiration
+        submodel = EXPIRATIONVALVE
+    properties:
+        multiplicity = 1
+    ports::individual:
+        io::signal port_1 -> 1
+        io::pflow port_2 -> 2
+    style:
+        port_1: position = bottom
+        port_2: position = bottom
+
+asset::Amesim VolSensor:
+    attributes:
+        float |null| Volume -> Volume
+        float |null| VolFlow -> VolFlow
+    componentinfo:
+        componentname = Volume_Sensor
+        submodel = VOLSENSE
+    properties:
+        multiplicity = 1
+    ports::individual:
+        io::pflow port_1 -> 1
+        io::signal port_2 -> 2
+        io::pflow port_3 -> 3
+    style:
+        port_1: position = right
+
+asset::Amesim O2Sensor:
+    componentinfo:
+        componentname = P_O2_Sensor
+        submodel = O2SENSOR
+    properties:
+        multiplicity = 1
+    ports::individual:
+        io::pflow port_1 -> 1
+        io::signal port_2 -> 2
+        io::pflow port_3 -> 3
+    style:
+        port_1: position = right
+        port_2: position = right
+
+connections::enforced:
+    Room_Air.port_1 -- Ventilator.port_3
+    O2Inlet.port_1 -- Ventilator.port_4
+    Vent_to_Humid_Pipe.port_1 -- Humidifier.port_2
+    Ventilator.port_2 -- Vent_to_Humid_Pipe.port_2
+    Controller.port_3 -- FeedValve.port_1
+    FeedValve.port_2 -- VolSensor.port_3
+    FeedValve.port_3 -- O2Sensor.port_1
+    gm_node3_3.port_1 -- Patient.port_1
+    Exp_Pipe.port_1 -- gm_node3_3.port_2
+    Insp_Pipe.port_1 -- gm_node3_3.port_3
+    Insp_Pipe.port_2 -- VolSensor.port_1
+    Exp_Pipe.port_2 -- Expiration.port_2
+    splitter2p.port_1 -- VolSensor.port_2
+    splitter2p.port_2 -- Expiration.port_1
+    splitter2p.port_3 -- Controller.port_4
+    Controller.port_1 -- Ventilator.port_1
+    O2Sensor.port_2 -- Controller.port_2
+    Humidifier.port_1 -- O2Sensor.port_3
+

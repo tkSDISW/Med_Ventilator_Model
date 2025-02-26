@@ -1,0 +1,16 @@
+./submodels
+Vent_Controller
+&VENTCONTROLLER Ventilator
+Vent_Humidifier
+&HUMIDIFIER Ventilator
+Ventilator
+&VENTILATOR Ventilator
+Expiration
+&EXPIRATIONVALVE Ventilator
+Volume_Sensor
+&VOLSENSE Ventilator
+P_O2_Sensor
+&O2SENSOR Ventilator
+FluidProps
+Patient
+&PATIENT Ventilator
