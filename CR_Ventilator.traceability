@@ -19,5 +19,11 @@
     <ownedLinkTypes id="fdbd26d1-bff3-4cf1-b269-6d2f58bad6f5" name="uses" impact="OPPOSITE_LINK"/>
     <ownedLinkTypes id="068a5695-a2dc-4583-8c60-6e4eb5e9df1b" name="validatedBy" impact="SYMMETRIC_IMPACT"/>
   </domains>
+  <repositories id="88415ed6-8709-46e9-9986-f4269c06fc24">
+    <linkRanges id="a1af7528-a787-4ad2-8844-858985752dd0" name="Requirement Satifies Element" linkType="d6d2ab42-e58e-47b2-b151-534748ea3c13" artifactRange="ddf00f14-ce88-432d-b49b-03d2d9eb546c 087f85e7-0ad7-4b48-8a1d-8f05c7439d99" directionConstraint="MODEL_TO_ARTIFACT">
+      <localRange>CapellaElement</localRange>
+    </linkRanges>
+    <store id="0d8a16bf-0e8e-4b90-ac0f-745d61e288ed"/>
+  </repositories>
   <latestSynchronizationPoint xsi:type="traceability:Publication" id="e5877200-e7f9-42c7-8079-4fa143938bfa" name="Publication at 2025-04-03T16:17:41.531306300Z" jobId="1"/>
 </traceability:Traceability>
