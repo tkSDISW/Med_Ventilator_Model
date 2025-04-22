@@ -1,29 +1,42 @@
 <?xml version="1.0" encoding="ASCII"?>
 <traceability:Traceability xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:traceability="http://www.obeo.fr/dsl/traceability" id="4399e09e-cf25-49e5-985a-e9ed3a69d9ff" modelUri="https://p4capella-mbse.diswx-lce.com/projects/840e5b2f-6a4d-42d8-b88c-5e7acf68d2af/edit/1">
-  <domains id="25bed541-c4aa-4939-94ad-2c656323bf62" name="Requirements Management" uri="http://open-services.net/ns/rm#" prefix="oslc_rm">
-    <ownedArtifactTypes id="ddf00f14-ce88-432d-b49b-03d2d9eb546c" name="Requirement"/>
-    <ownedArtifactTypes id="087f85e7-0ad7-4b48-8a1d-8f05c7439d99" name="RequirementCollection"/>
-    <ownedLinkTypes id="909b861a-837d-4e04-bbbd-178f5ed316f3" name="affectedBy" impact="OPPOSITE_LINK"/>
-    <ownedLinkTypes id="6bc3a38f-0f4e-43ec-b851-bb8b40340b19" name="constrainedBy" inverse="3ba2a2e7-f493-4460-8582-faf240142df0" impact="OPPOSITE_LINK"/>
-    <ownedLinkTypes id="3ba2a2e7-f493-4460-8582-faf240142df0" name="constrains" inverse="6bc3a38f-0f4e-43ec-b851-bb8b40340b19" impact="FOLLOWS_LINK"/>
-    <ownedLinkTypes id="3bd305b0-37d4-41be-9976-703ac8771558" name="decomposedBy" inverse="c866aec8-3ea7-4190-968a-e19411555ae7" impact="OPPOSITE_LINK"/>
-    <ownedLinkTypes id="c866aec8-3ea7-4190-968a-e19411555ae7" name="decomposes" inverse="3bd305b0-37d4-41be-9976-703ac8771558" impact="FOLLOWS_LINK"/>
-    <ownedLinkTypes id="2a3890c0-f770-4182-a9aa-026c08b0e1f7" name="elaboratedBy" inverse="412f055e-b19b-436f-a04c-4aef690558e1" impact="OPPOSITE_LINK"/>
-    <ownedLinkTypes id="412f055e-b19b-436f-a04c-4aef690558e1" name="elaborates" inverse="2a3890c0-f770-4182-a9aa-026c08b0e1f7" impact="FOLLOWS_LINK"/>
-    <ownedLinkTypes id="433d8099-4eec-42cd-b4d4-0309a932079d" name="satisfiedBy" inverse="d6d2ab42-e58e-47b2-b151-534748ea3c13" impact="OPPOSITE_LINK"/>
-    <ownedLinkTypes id="d6d2ab42-e58e-47b2-b151-534748ea3c13" name="satisfies" inverse="433d8099-4eec-42cd-b4d4-0309a932079d" impact="FOLLOWS_LINK"/>
-    <ownedLinkTypes id="db57cb39-22ba-4ac5-8465-a7f21cfc0cd6" name="implementedBy" impact="SYMMETRIC_IMPACT"/>
-    <ownedLinkTypes id="18b36d32-2981-4b9d-be7b-1f40eca6e28d" name="specifiedBy" inverse="2161c442-6ccf-4b48-b997-7ca3d309545e" impact="OPPOSITE_LINK"/>
-    <ownedLinkTypes id="2161c442-6ccf-4b48-b997-7ca3d309545e" name="specifies" inverse="18b36d32-2981-4b9d-be7b-1f40eca6e28d" impact="FOLLOWS_LINK"/>
-    <ownedLinkTypes id="d07f81dc-350e-45a4-96e6-a2173b8852e8" name="trackedBy" impact="OPPOSITE_LINK"/>
-    <ownedLinkTypes id="fdbd26d1-bff3-4cf1-b269-6d2f58bad6f5" name="uses" impact="OPPOSITE_LINK"/>
-    <ownedLinkTypes id="068a5695-a2dc-4583-8c60-6e4eb5e9df1b" name="validatedBy" impact="SYMMETRIC_IMPACT"/>
+  <domains id="cf28363b-b5c1-4c61-8ec9-f7ca9ab2ae16" name="Requirements Management" uri="http://open-services.net/ns/rm#" prefix="oslc_rm">
+    <ownedArtifactTypes id="9f8a7d56-847f-46a7-85f6-ebeeea8f7b2d" name="Requirement"/>
+    <ownedArtifactTypes id="5e30e5f2-d3df-4ace-93cf-737598eb17e3" name="RequirementCollection"/>
+    <ownedLinkTypes id="cd46902d-7381-401c-8365-091e5cab672b" name="affectedBy" impact="OPPOSITE_LINK"/>
+    <ownedLinkTypes id="c954d2aa-cee2-40ff-ba30-8ba0c0609d8b" name="constrainedBy" inverse="2b4b8927-d8cf-4341-80fe-1ed9458622c5" impact="OPPOSITE_LINK"/>
+    <ownedLinkTypes id="2b4b8927-d8cf-4341-80fe-1ed9458622c5" name="constrains" inverse="c954d2aa-cee2-40ff-ba30-8ba0c0609d8b" impact="FOLLOWS_LINK"/>
+    <ownedLinkTypes id="6722b4a2-7cec-4ad5-82bd-da51c1264384" name="decomposedBy" inverse="c33fcd2b-981f-440e-ab93-07592d961c47" impact="OPPOSITE_LINK"/>
+    <ownedLinkTypes id="c33fcd2b-981f-440e-ab93-07592d961c47" name="decomposes" inverse="6722b4a2-7cec-4ad5-82bd-da51c1264384" impact="FOLLOWS_LINK"/>
+    <ownedLinkTypes id="32442771-e15d-4770-a7d2-33ba97f1c346" name="elaboratedBy" inverse="c84ffb20-6a52-423f-997a-d1d3eedd2e11" impact="OPPOSITE_LINK"/>
+    <ownedLinkTypes id="c84ffb20-6a52-423f-997a-d1d3eedd2e11" name="elaborates" inverse="32442771-e15d-4770-a7d2-33ba97f1c346" impact="FOLLOWS_LINK"/>
+    <ownedLinkTypes id="d6d2569b-794a-4f65-9401-5a7c141b9c7d" name="satisfiedBy" inverse="1538faa9-1a3f-4aae-9a05-2bb081b3ed50" impact="OPPOSITE_LINK"/>
+    <ownedLinkTypes id="1538faa9-1a3f-4aae-9a05-2bb081b3ed50" name="satisfies" inverse="d6d2569b-794a-4f65-9401-5a7c141b9c7d" impact="FOLLOWS_LINK"/>
+    <ownedLinkTypes id="db504c22-bbd4-44f8-b596-c2f9cfc089fb" name="implementedBy" impact="SYMMETRIC_IMPACT"/>
+    <ownedLinkTypes id="64a92f27-7554-46f6-8947-e8b5f3cbe215" name="specifiedBy" inverse="8d526c41-8f70-4e84-bcce-6cc6b59a14d4" impact="OPPOSITE_LINK"/>
+    <ownedLinkTypes id="8d526c41-8f70-4e84-bcce-6cc6b59a14d4" name="specifies" inverse="64a92f27-7554-46f6-8947-e8b5f3cbe215" impact="FOLLOWS_LINK"/>
+    <ownedLinkTypes id="7df0a25d-ac36-4a54-8b44-71803ce39e54" name="trackedBy" impact="OPPOSITE_LINK"/>
+    <ownedLinkTypes id="3d73917f-5f7f-49d8-a74a-666a17774210" name="uses" impact="OPPOSITE_LINK"/>
+    <ownedLinkTypes id="8d96f352-027e-4434-9384-7e461e6e1fcb" name="validatedBy" impact="SYMMETRIC_IMPACT"/>
   </domains>
-  <repositories id="88415ed6-8709-46e9-9986-f4269c06fc24">
-    <linkRanges id="a1af7528-a787-4ad2-8844-858985752dd0" name="Requirement Satifies Element" linkType="d6d2ab42-e58e-47b2-b151-534748ea3c13" artifactRange="ddf00f14-ce88-432d-b49b-03d2d9eb546c 087f85e7-0ad7-4b48-8a1d-8f05c7439d99" directionConstraint="MODEL_TO_ARTIFACT">
+  <repositories id="88415ed6-8709-46e9-9986-f4269c06fc24" name="lce" url="https://siemens-mbse.diswx-lce.com/polarion/oslc/rootservices">
+    <linkRanges id="cf5f5fda-6590-4e34-a12b-5d3b05dd5348" name="Any to satisfies requirement" linkType="1538faa9-1a3f-4aae-9a05-2bb081b3ed50" artifactRange="9f8a7d56-847f-46a7-85f6-ebeeea8f7b2d" directionConstraint="MODEL_TO_ARTIFACT">
       <localRange>CapellaElement</localRange>
+      <localRange>Capability</localRange>
     </linkRanges>
-    <store id="0d8a16bf-0e8e-4b90-ac0f-745d61e288ed"/>
+    <store id="0d8a16bf-0e8e-4b90-ac0f-745d61e288ed">
+      <ownedArtifacts xsi:type="traceability:Artifact" types="9f8a7d56-847f-46a7-85f6-ebeeea8f7b2d" title="Deliver Ventilation" url="https://siemens-mbse.diswx-lce.com/polarion/oslc/services/projects/BD_Ventilator/workitems/BDV-1520" identifier="BDV-1520" id="07ceda12-c704-4c14-976e-4a187358b96f">
+        <ownedLinks xsi:type="traceability:Link" type="1538faa9-1a3f-4aae-9a05-2bb081b3ed50" artifact="07ceda12-c704-4c14-976e-4a187358b96f" id="c239fad6-42e1-472a-ae3a-44719fd88256">
+          <modelObject href="CR_Ventilator.capella#0e058125-99e4-4006-a8a3-c3d13430bbe2"/>
+        </ownedLinks>
+      </ownedArtifacts>
+    </store>
+    <snapshots timestamp="2025-04-11T12:24:41.143576Z">
+      <linksByModelObjectId key="0e058125-99e4-4006-a8a3-c3d13430bbe2">
+        <value artifactURL="https://siemens-mbse.diswx-lce.com/polarion/oslc/services/projects/BD_Ventilator/workitems/BDV-1520" typeName="oslc_rm:satisfies"/>
+      </linksByModelObjectId>
+      <uriPrefixes key="oslc_rm" value="http://open-services.net/ns/rm#"/>
+    </snapshots>
   </repositories>
-  <latestSynchronizationPoint xsi:type="traceability:Publication" id="e5877200-e7f9-42c7-8079-4fa143938bfa" name="Publication at 2025-04-03T16:17:41.531306300Z" jobId="1"/>
+  <latestSynchronizationPoint xsi:type="traceability:Publication" id="ebef0a5f-e354-4e33-bf4b-4dd77748ea43" name="Publication at 2025-04-11T12:25:12.153695200Z" traceabilitySnapshots="//@repositories.0/@snapshots[timestamp='2025-04-11T12%3A24%3A41.143576Z']" jobId="2"/>
 </traceability:Traceability>
