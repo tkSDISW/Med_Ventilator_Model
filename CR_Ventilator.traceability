@@ -24,13 +24,7 @@
       <localRange>CapellaElement</localRange>
       <localRange>Capability</localRange>
     </linkRanges>
-    <store id="0d8a16bf-0e8e-4b90-ac0f-745d61e288ed">
-      <ownedArtifacts xsi:type="traceability:Artifact" types="9f8a7d56-847f-46a7-85f6-ebeeea8f7b2d" title="Deliver Ventilation" url="https://siemens-mbse.diswx-lce.com/polarion/oslc/services/projects/BD_Ventilator/workitems/BDV-1520" identifier="BDV-1520" id="07ceda12-c704-4c14-976e-4a187358b96f">
-        <ownedLinks xsi:type="traceability:Link" type="1538faa9-1a3f-4aae-9a05-2bb081b3ed50" artifact="07ceda12-c704-4c14-976e-4a187358b96f" id="c239fad6-42e1-472a-ae3a-44719fd88256">
-          <modelObject href="CR_Ventilator.capella#0e058125-99e4-4006-a8a3-c3d13430bbe2"/>
-        </ownedLinks>
-      </ownedArtifacts>
-    </store>
+    <store id="0d8a16bf-0e8e-4b90-ac0f-745d61e288ed"/>
     <snapshots timestamp="2025-04-11T12:24:41.143576Z">
       <linksByModelObjectId key="0e058125-99e4-4006-a8a3-c3d13430bbe2">
         <value artifactURL="https://siemens-mbse.diswx-lce.com/polarion/oslc/services/projects/BD_Ventilator/workitems/BDV-1520" typeName="oslc_rm:satisfies"/>
